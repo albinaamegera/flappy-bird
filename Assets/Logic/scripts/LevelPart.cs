@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class LevelPart : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    Transform _transform;
+    BoxCollider2D _collider;
+    float _width;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _transform = transform;
+        _collider = GetComponent<BoxCollider2D>();
+        _width = _collider.bounds.size.x;
+    }
+    public void Move(float xPos)
+    {
+        transform.position = new Vector2(xPos + _width, transform.position.y);
+        // some animations
+    }
+    public void Appear()
+    {
+
     }
 }

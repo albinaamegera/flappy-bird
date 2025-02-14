@@ -7,7 +7,7 @@ public class InfiniteLevelManager : MonoBehaviour
     [SerializeField] private LevelPart _levelpart;
     [SerializeField] private Timer _timer;
     [SerializeField] private float _startXPos;
-    [SerializeField] private float _levelpartWidth;
+    //[SerializeField] private float _levelpartWidth;
     [SerializeField] private int _partsCount;
 
     LevelPart[] _partsOnLevel;
@@ -31,8 +31,16 @@ public class InfiniteLevelManager : MonoBehaviour
 
         for (int i = 0; i < _partsCount; i++)
         {
-            var x = _startXPos + i * _levelpartWidth;
-            var part = Instantiate(_levelpart, new Vector2(x, 0f), Quaternion.identity);
+            //var x = _startXPos + i * _levelpartWidth;
+            var part = Instantiate(_levelpart, Vector2.zero, Quaternion.identity);
+            if (i == 0)
+            {
+                part.Move(_startXPos);
+            }
+            else
+            {
+                part.Move(_partsOnLevel[i - 1].transform.position.x);
+            }
             _partsOnLevel[i] = part;
         }
     }
@@ -46,7 +54,8 @@ public class InfiniteLevelManager : MonoBehaviour
     private void MoveLastToFirst()
     {
         var first = _partsOnLevel[0];
-        first.transform.position = new Vector2(_partsOnLevel[_partsCount - 1].transform.position.x + _levelpartWidth, 0f);
+        //first.transform.position = new Vector2(_partsOnLevel[_partsCount - 1].transform.position.x + _levelpartWidth, 0f);
+        first.Move(_partsOnLevel[_partsCount - 1].transform.position.x);
 
         for (int i = 0; i < _partsCount - 1; i++)
         {
