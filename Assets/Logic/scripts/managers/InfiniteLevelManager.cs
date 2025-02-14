@@ -4,15 +4,15 @@ using UnityEngine;
 public class InfiniteLevelManager : MonoBehaviour
 {
     [Header("settings")]
-    [SerializeField] private LevelPart _levelpart;
-    [SerializeField] private Timer _timer;
-    [SerializeField] private float _startXPos;
+    [SerializeField] protected LevelPart _levelpart;
+    [SerializeField] protected Timer _timer;
+    [SerializeField] protected float _startXPos;
     //[SerializeField] private float _levelpartWidth;
-    [SerializeField] private int _partsCount;
+    [SerializeField] protected int _partsCount;
 
-    LevelPart[] _partsOnLevel;
-    Camera _camera;
-    float _cameraHalfWidth;
+    protected LevelPart[] _partsOnLevel;
+    protected Camera _camera;
+    protected float _cameraHalfWidth;
     private void Awake()
     {
         _camera = Camera.main;
@@ -44,14 +44,14 @@ public class InfiniteLevelManager : MonoBehaviour
             _partsOnLevel[i] = part;
         }
     }
-    private void CheckCameraBorders()
+    protected virtual void CheckCameraBorders()
     {
         if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[0].transform.position.x)
         {
             MoveLastToFirst();
         }
     }
-    private void MoveLastToFirst()
+    protected void MoveLastToFirst()
     {
         var first = _partsOnLevel[0];
         //first.transform.position = new Vector2(_partsOnLevel[_partsCount - 1].transform.position.x + _levelpartWidth, 0f);

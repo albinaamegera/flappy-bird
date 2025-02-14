@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed;
     [Tooltip("сила прыжка персонажа")]
     [SerializeField] private float _jumpForce;
+    [Tooltip("слой препятствий")]
+    [SerializeField] private LayerMask _obstacleLayer;
+
     Transform _transform;
     Rigidbody2D _rb;
     Controls _controls;
@@ -29,5 +32,12 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Obstacle")
+        {
+            Debug.Log("game over");
+        }
     }
 }

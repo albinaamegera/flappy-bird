@@ -6,7 +6,7 @@ public class LevelPart : MonoBehaviour
     BoxCollider2D _collider;
     float _width;
 
-    private void Awake()
+    protected void Awake()
     {
         _transform = transform;
         _collider = GetComponent<BoxCollider2D>();
@@ -14,7 +14,7 @@ public class LevelPart : MonoBehaviour
     }
     public void Move(float xPos)
     {
-        transform.position = new Vector2(xPos + _width, transform.position.y);
+        _transform.position = new Vector2(xPos + _width, transform.position.y);
         // some animations
     }
     public void Appear()
