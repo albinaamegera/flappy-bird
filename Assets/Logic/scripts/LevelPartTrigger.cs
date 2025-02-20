@@ -6,7 +6,7 @@ public class LevelPartTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Debug.Log(" + 1 point");
+            GameManager.Instance.AddScore();
         }
     }
 }

@@ -10,14 +10,16 @@ public class PlayerController : MonoBehaviour
     [Tooltip("слой препятствий")]
     [SerializeField] private LayerMask _obstacleLayer;
 
-    Transform _transform;
     Rigidbody2D _rb;
+    CircleCollider2D _collider;
     Controls _controls;
+
+    bool _isDisabled = false;
 
     private void Awake()
     {
-        _transform = transform;
         _rb = GetComponent<Rigidbody2D>();
+        _collider = GetComponent<CircleCollider2D>();
         _controls = new();
     }
     private void Start()
@@ -27,17 +29,31 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        Move();
+    }
+    private void Move()
+    {
+        if (_isDisabled) return;
+
         _rb.linearVelocity = new Vector2(_speed * Time.fixedDeltaTime, _rb.linearVelocityY);
     }
     private void Jump()
     {
+        if (_isDisabled) return;
+
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Obstacle")
         {
-            Debug.Log("game over");
+            OnGameOver();
         }
+    }
+    private void OnGameOver()
+    {
+        _isDisabled = true;
+        _collider.enabled = false;
+        GameManager.Instance.GameOver();
     }
 }
