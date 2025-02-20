@@ -1891,6 +1891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919464633}
   - component: {fileID: 1919464634}
+  - component: {fileID: 1919464638}
   - component: {fileID: 1919464635}
   - component: {fileID: 1919464637}
   - component: {fileID: 1919464636}
@@ -1910,7 +1911,7 @@ Transform:
   m_GameObject: {fileID: 1919464632}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: 0, z: 0}
+  m_LocalPosition: {x: -4.08, y: 2.46, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1930,10 +1931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 100.1
-  _jumpForce: 11.94
-  _obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  _jumpForce: 9.4
+  _startPosition: {x: -4.08, y: 2.46}
 --- !u!114 &1919464635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2010,6 +2009,22 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.015}
   m_Radius: 0.07
+--- !u!114 &1919464638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919464632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac89c4fda4793a842b31bf41d281d852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 40
+  maxUpAngle: 20
+  maxDownAngle: -60
+  _targetTransform: {fileID: 442846800}
 --- !u!1 &2084411933
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d3d4ccec23dba4cb212f55138f93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: {fileID: 0}
 --- !u!4 &2084411935
 Transform:
   m_ObjectHideFlags: 0

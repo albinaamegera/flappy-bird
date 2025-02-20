@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     }
     public void StartLevel()
     {
+        _score = 0;
+        OnScoreAdded?.Invoke(_score);
         OnLevelStart?.Invoke();
     }
     public void GameOver()

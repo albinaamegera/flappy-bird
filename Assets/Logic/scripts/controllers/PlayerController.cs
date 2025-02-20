@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed;
     [Tooltip("сила прыжка персонажа")]
     [SerializeField] private float _jumpForce;
-    [Tooltip("слой препятствий")]
-    [SerializeField] private LayerMask _obstacleLayer;
+    [Tooltip("начальная позиция")]
+    [SerializeField] private Vector2 _startPosition;
 
     Rigidbody2D _rb;
     CircleCollider2D _collider;
@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         _controls.Player.Enable();
         _controls.Player.PlayerAction.performed += c => Jump();
+        GameManager.Instance.OnLevelStart += Preparation;
     }
     private void FixedUpdate()
     {
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
     }
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Obstacle")
@@ -50,10 +52,22 @@ public class PlayerController : MonoBehaviour
             OnGameOver();
         }
     }
+    */
     private void OnGameOver()
     {
+        GameManager.Instance.GameOver();
         _isDisabled = true;
         _collider.enabled = false;
-        GameManager.Instance.GameOver();
+    }
+    private void Preparation()
+    {
+        transform.position = _startPosition;
+        _isDisabled = false;
+        _rb.linearVelocity = Vector2.zero;
+        _collider.enabled = true;
+    }
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnLevelStart -= Preparation;
     }
 }

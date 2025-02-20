@@ -7,7 +7,6 @@ public class InfiniteLevelManager : MonoBehaviour
     [SerializeField] protected LevelPart _levelpart;
     [SerializeField] protected Timer _timer;
     [SerializeField] protected float _startXPos;
-    //[SerializeField] private float _levelpartWidth;
     [SerializeField] protected int _partsCount;
 
     protected LevelPart[] _partsOnLevel;
@@ -24,9 +23,12 @@ public class InfiniteLevelManager : MonoBehaviour
 
         _timer.OnTimerComplete.AddListener(CheckCameraBorders);
         _timer.StartTimer();
+
+        GameManager.Instance.OnLevelStart += ResetLevel;
     }
     private void PrepareLevel()
     {
+
         _partsOnLevel = new LevelPart[_partsCount];
 
         for (int i = 0; i < _partsCount; i++)
@@ -42,6 +44,20 @@ public class InfiniteLevelManager : MonoBehaviour
                 part.Move(_partsOnLevel[i - 1].transform.position.x);
             }
             _partsOnLevel[i] = part;
+        }
+    }
+    private void ResetLevel()
+    {
+        for (int i = 0; i < _partsOnLevel.Length; i++)
+        {
+            if (i == 0)
+            {
+                _partsOnLevel[i].Move(_startXPos);
+            }
+            else
+            {
+                _partsOnLevel[i].Move(_partsOnLevel[i - 1].transform.position.x);
+            }
         }
     }
     protected virtual void CheckCameraBorders()
@@ -63,5 +79,9 @@ public class InfiniteLevelManager : MonoBehaviour
         }
 
         _partsOnLevel[_partsCount - 1] = first;
+    }
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnLevelStart -= ResetLevel;
     }
 }
