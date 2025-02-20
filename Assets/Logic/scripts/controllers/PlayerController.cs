@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [Tooltip("начальная позиция")]
     [SerializeField] private Vector2 _startPosition;
 
+    [Header("development")]
+    [SerializeField] private bool _useOnDevelopment = false;
+
     Rigidbody2D _rb;
     CircleCollider2D _collider;
     Controls _controls;
@@ -24,6 +27,11 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
+        if (_useOnDevelopment)
+        {
+            Debug.Log("on development is enabled !");
+        }
+
         _controls.Player.Enable();
         _controls.Player.PlayerAction.performed += c => Jump();
         GameManager.Instance.OnLevelStart += Preparation;
@@ -44,15 +52,14 @@ public class PlayerController : MonoBehaviour
 
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
     }
-    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (_useOnDevelopment) return;
         if (collision.collider.tag == "Obstacle")
         {
             OnGameOver();
         }
     }
-    */
     private void OnGameOver()
     {
         GameManager.Instance.GameOver();
