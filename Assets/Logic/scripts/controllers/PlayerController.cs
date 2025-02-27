@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _jumpForce;
     [Tooltip("начальная позиция")]
     [SerializeField] private Vector2 _startPosition;
+
+    [Header("unity events")]
+    [Tooltip("ивент прыжка")]
+    [SerializeField] private UnityEvent _onJump;
+    [Tooltip("ивент конца игры")]
+    [SerializeField] private UnityEvent _onGameOver;
 
     [Header("development")]
     [SerializeField] private bool _useOnDevelopment = false;
@@ -51,6 +58,7 @@ public class PlayerController : MonoBehaviour
         if (_isDisabled) return;
 
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
+        _onJump.Invoke();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -65,6 +73,7 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.GameOver();
         _isDisabled = true;
         _collider.enabled = false;
+        _onGameOver.Invoke();
     }
     private void Preparation()
     {

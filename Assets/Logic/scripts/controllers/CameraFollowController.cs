@@ -4,16 +4,15 @@ public class CameraFollowController : MonoBehaviour
 {
     [Tooltip("расстояние на котором камера держится от игрока")]
     [SerializeField] private Vector3 _offset;
-    Transform _transform;                       // трансформ игрока
+    [SerializeField] private Transform _playerTransform;                       // трансформ игрока
     Transform _camera;                          // трансформ камеры
 
     private void Awake()
     {
-        _transform = transform;
-        _camera = Camera.main.transform;
+        _camera = transform;
     }
     private void LateUpdate()
     {
-        _camera.transform.position = new Vector3(_transform.position.x, 0f, 0f) + _offset;
+        _camera.position = new Vector3(_playerTransform.position.x, 0f, 0f) + _offset;
     }
 }
