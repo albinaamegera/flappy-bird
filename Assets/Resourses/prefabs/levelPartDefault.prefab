@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 1197432717618334440}
   - component: {fileID: 4148602656570836210}
   - component: {fileID: 5246094770122053142}
+  - component: {fileID: 1712751411773055791}
   - component: {fileID: 779171293476350356}
   m_Layer: 0
   m_Name: levelPartDefault
@@ -156,6 +157,21 @@ MonoBehaviour:
   _bottomTube: {fileID: 6932607077562246297}
   _distBetweenCenterAndTube: 0.27
   _maxYOffset: 0.65
+--- !u!114 &1712751411773055791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131934804346971019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04b93fd8ee91be4e9c663c26c7473f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinPrefab: {fileID: 705429486405326185, guid: d233b2472fb83e24aa9d4c44d5dcffd1, type: 3}
+  _verticalBorder: 3.59
+  _xOffset: 2.22
 --- !u!61 &779171293476350356
 BoxCollider2D:
   m_ObjectHideFlags: 0

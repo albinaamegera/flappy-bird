@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public Action<int> OnScoreAdded;
+    public Action<int> OnCoinCollected;
     public Action OnGameOver;
     public Action OnLevelStart;
 
@@ -13,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer _timer;      // на всякий случай пока не используется
 
     private int _score = 0;
+    private int _coins = 0;
 
     private void Awake()
     {
@@ -28,6 +30,12 @@ public class GameManager : MonoBehaviour
         _score = 0;
         OnScoreAdded?.Invoke(_score);
         OnLevelStart?.Invoke();
+    }
+    public void CollectCoin()
+    {
+        _coins++;
+        OnCoinCollected?.Invoke(_coins);
+        Debug.Log("coin collected");
     }
     public void GameOver()
     {

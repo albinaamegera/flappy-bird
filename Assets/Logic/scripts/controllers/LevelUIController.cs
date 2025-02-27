@@ -5,6 +5,7 @@ public class LevelUIController : MonoBehaviour
 {
     [Header("UI elements")]
     [SerializeField] private TMP_Text _scoreText;
+    [SerializeField] private TMP_Text _coinText;
     [SerializeField] private PauseMenuController _controller;
 
     [Header("settings")]
@@ -15,6 +16,7 @@ public class LevelUIController : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnScoreAdded += UpdateScoreText;
+        GameManager.Instance.OnCoinCollected += UpdateCoinText;
         GameManager.Instance.OnGameOver += _timer.StartTimer;
         _timer.OnTimerComplete.AddListener(ShowGameOverPanel);
     }
@@ -23,6 +25,10 @@ public class LevelUIController : MonoBehaviour
         _currentScore = value;
         _scoreText.text = value.ToString();
     }
+    private void UpdateCoinText(int value)
+    {
+        _coinText.text = value.ToString();
+    }
     private void ShowGameOverPanel()
     {
         _controller.Show(_currentScore);
@@ -30,6 +36,7 @@ public class LevelUIController : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.Instance.OnScoreAdded -= UpdateScoreText;
+        GameManager.Instance.OnCoinCollected -= UpdateCoinText;
         GameManager.Instance.OnGameOver -= _timer.StartTimer;
     }
 }
