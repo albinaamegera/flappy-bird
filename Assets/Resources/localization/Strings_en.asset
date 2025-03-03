@@ -10,20 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: String Table_en
+  m_Name: Strings_en
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: en
-  m_SharedData: {fileID: 11400000, guid: dc51daa9ccfac3740b2af697e450091c, type: 2}
+  m_SharedData: {fileID: 11400000, guid: d887b1b98055e224d81560118c7c2506, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 31285227520
+  - m_Id: 5485506560
     m_Localized: english
     m_Metadata:
       m_Items: []
-  - m_Id: 234880937984
-    m_Localized: welcome message
+  - m_Id: 9407180800
+    m_Localized: play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11797934080
+    m_Localized: options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14775889920
+    m_Localized: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18705424986112
+    m_Localized: unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62141251891200
+    m_Localized: credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62264472154112
+    m_Localized: back
     m_Metadata:
       m_Items: []
   references:

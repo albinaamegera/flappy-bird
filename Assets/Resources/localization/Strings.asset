@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
-  m_Name: String Table
+  m_Name: Strings
   m_EditorClassIdentifier: 
-  m_SharedTableData: {fileID: 11400000, guid: dc51daa9ccfac3740b2af697e450091c, type: 2}
+  m_SharedTableData: {fileID: 11400000, guid: d887b1b98055e224d81560118c7c2506, type: 2}
   m_Tables:
-  - {fileID: 11400000, guid: e7b963bf55a21554cae63433ba499056, type: 2}
-  - {fileID: 11400000, guid: aac9cb15e280f754fa9b0f745d3d2451, type: 2}
+  - {fileID: 11400000, guid: 850428211d3acae44919a74567ac0300, type: 2}
+  - {fileID: 11400000, guid: 640c55ed9a706e34f963da5a90682e1b, type: 2}
   m_Extensions: []
   m_Group: String Table
   references:

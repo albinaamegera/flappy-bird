@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 82c268fa2d3a1d5488553b699df51b7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1110126541007599292
+    second: coins-chests-etc-2-0_0
+  - first:
+      213: 6677371199585168653
+    second: coins-chests-etc-2-0_1
+  - first:
+      213: 3179439825839413324
+    second: coins-chests-etc-2-0_2
+  - first:
+      213: -4783615127557352424
+    second: coins-chests-etc-2-0_3
+  - first:
+      213: 3546711308377936960
+    second: coins-chests-etc-2-0_4
+  - first:
+      213: -2976798012191111905
+    second: coins-chests-etc-2-0_5
+  - first:
+      213: -384133781660307682
+    second: coins-chests-etc-2-0_6
+  - first:
+      213: 7428233801177773207
+    second: coins-chests-etc-2-0_7
+  - first:
+      213: -6885073698904915356
+    second: coins-chests-etc-2-0_8
+  - first:
+      213: -5053005104965179263
+    second: coins-chests-etc-2-0_9
+  - first:
+      213: 5781152556637011241
+    second: coins-chests-etc-2-0_10
+  - first:
+      213: 47853134441211810
+    second: coins-chests-etc-2-0_11
+  - first:
+      213: -8547117569818187076
+    second: coins-chests-etc-2-0_12
+  - first:
+      213: 5986398663914978439
+    second: coins-chests-etc-2-0_13
+  - first:
+      213: -7693507295091667559
+    second: coins-chests-etc-2-0_14
+  - first:
+      213: 8435045845211337512
+    second: coins-chests-etc-2-0_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coin_default_sprite
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1007
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449428beac90890f0800000000000000
+      internalID: -1110126541007599292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coins-chests-etc-2-0_13
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 429
+        width: 134
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c76861ed5f31350800000000000000
+      internalID: 5986398663914978439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d4430e6a1aaa4064399722e4e945aaeb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      coin_default_sprite: -1110126541007599292
+      coins-chests-etc-2-0_1: 6677371199585168653
+      coins-chests-etc-2-0_10: 5781152556637011241
+      coins-chests-etc-2-0_11: 47853134441211810
+      coins-chests-etc-2-0_12: -8547117569818187076
+      coins-chests-etc-2-0_13: 5986398663914978439
+      coins-chests-etc-2-0_14: -7693507295091667559
+      coins-chests-etc-2-0_15: 8435045845211337512
+      coins-chests-etc-2-0_2: 3179439825839413324
+      coins-chests-etc-2-0_3: -4783615127557352424
+      coins-chests-etc-2-0_4: 3546711308377936960
+      coins-chests-etc-2-0_5: -2976798012191111905
+      coins-chests-etc-2-0_6: -384133781660307682
+      coins-chests-etc-2-0_7: 7428233801177773207
+      coins-chests-etc-2-0_8: -6885073698904915356
+      coins-chests-etc-2-0_9: -5053005104965179263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
