@@ -43,6 +43,14 @@ MonoBehaviour:
     m_Key: options_back
     m_Metadata:
       m_Items: []
+  - m_Id: 1063487497220096
+    m_Key: options_music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1063625917640704
+    m_Key: options_sounds
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

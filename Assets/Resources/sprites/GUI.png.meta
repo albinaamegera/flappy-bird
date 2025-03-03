@@ -970,28 +970,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_27
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 160
-        width: 55
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7ba33965ee076d0d0800000000000000
-      internalID: -3398404699847443785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: big_btn_pressed
       rect:
         serializedVersion: 2
@@ -2465,6 +2443,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: smal_lloading_bar_back
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 164
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 1, z: 1, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13fb3c2e1092994d809769df70e1776
+      internalID: -1352727070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_line
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 161
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a77e3ba2a1f974095b2b87e962ecb2
+      internalID: -1256230223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -2569,9 +2591,11 @@ TextureImporter:
       arrow_right: -287043232
       big_btn: -550459873359513890
       big_btn_pressed: -4618709357139527197
+      loading_line: -1256230223
       lock_icon: 9112046958845575407
       medium_btn: -4972417160956389086
       medium_btn_pressed: -3673437966201261359
+      smal_lloading_bar_back: -1352727070
       small_btn: -7344508877482438339
       small_btn_pressed: -7568063341596875841
   mipmapLimitGroupName: 

@@ -16,4 +16,12 @@ public class SoundManager : MonoBehaviour
     {
         _clipSoundSource.PlayOneShot(clip);
     }
+    public void ChangeMusicVolume(float value)
+    {
+        _mainThemeSource.volume = value;
+    }
+    public void ChangeSoundVolume(float value)
+    {
+        _clipSoundSource.volume = value;
+    }
 }
