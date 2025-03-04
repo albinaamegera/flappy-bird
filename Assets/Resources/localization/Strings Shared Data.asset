@@ -51,6 +51,18 @@ MonoBehaviour:
     m_Key: options_sounds
     m_Metadata:
       m_Items: []
+  - m_Id: 1387197106139136
+    m_Key: levelpanel_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1387475565981696
+    m_Key: levelpanel_restartbtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1387563772194816
+    m_Key: levelpanel_menubtn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

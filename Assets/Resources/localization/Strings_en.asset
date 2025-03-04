@@ -54,6 +54,18 @@ MonoBehaviour:
     m_Localized: sounds
     m_Metadata:
       m_Items: []
+  - m_Id: 1387197106139136
+    m_Localized: game over !!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1387475565981696
+    m_Localized: restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1387563772194816
+    m_Localized: menu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

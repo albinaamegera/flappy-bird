@@ -8,6 +8,7 @@ public class InfiniteLevelManager : MonoBehaviour
     [SerializeField] protected Timer _timer;
     [SerializeField] protected float _startXPos;
     [SerializeField] protected int _partsCount;
+    [SerializeField] protected float _xDisappearOffset = 4f;
 
     protected LevelPart[] _partsOnLevel;
     protected Camera _camera;
@@ -62,7 +63,7 @@ public class InfiniteLevelManager : MonoBehaviour
     }
     protected virtual void CheckCameraBorders()
     {
-        if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[0].transform.position.x)
+        if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[0].transform.position.x + _xDisappearOffset)
         {
             MoveLastToFirst();
         }
