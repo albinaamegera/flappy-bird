@@ -16,7 +16,7 @@ public class CoinController : MonoBehaviour
     public void LocateCoin(float yCenter)
     {
         _currentCoin.transform.position = CalculateRandomPosition(yCenter);
-        _currentCoin.gameObject.SetActive(true);
+        _currentCoin.Restart();
     }
     private Vector2 CalculateRandomPosition(float yCenter)
     {

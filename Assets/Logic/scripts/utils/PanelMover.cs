@@ -17,7 +17,6 @@ public class PanelMover : MonoBehaviour
 
     private float[] _xPositions;
     private int _currentPanelId = 0;
-    private float _startXPos = 0f;
     private float _screenWidth;
     private void Start()
     {
