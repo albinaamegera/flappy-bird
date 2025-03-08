@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33bf82f438d25ac429a741b53be63e35, type: 3}
-  m_Name: skin_3
+  m_Script: {fileID: 11500000, guid: 17a49aeae18cf91409016e3ab86012fc, type: 3}
+  m_Name: PlayerData
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 1577737794626233691, guid: 5d9faf5ca7bbf2b4689edda8846c076a, type: 3}
-  _isLocked: 0
+  coins: 17
+  maxScore: 2

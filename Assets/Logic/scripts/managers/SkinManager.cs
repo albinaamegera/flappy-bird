@@ -13,7 +13,7 @@ public class SkinManager : MonoBehaviour
     private void Awake()
     {
         _skins = new();
-        System.Object[] objects = Resources.LoadAll("scriptables", typeof(Skin));
+        System.Object[] objects = Resources.LoadAll("scriptables/skins", typeof(Skin));
 
         foreach(var obj in objects)
         {

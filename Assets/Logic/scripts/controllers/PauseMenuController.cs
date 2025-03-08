@@ -1,16 +1,19 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
 {
     [Header("ui components")]
+    [SerializeField] private GameObject _pausePanel;
     [SerializeField] private TMP_Text _scoreText;
+    [SerializeField] private TMP_Text _scoreNewRecordText;
     [SerializeField] private Button _restartBtn;
     [SerializeField] private Button _goToMenuBtn;
 
-    [Header("settings")]
-    [SerializeField] private string _text;
+    public string message { get; set; }
+    public string newRecordMessage { get; set; }
 
     public void Start()
     {
@@ -19,12 +22,25 @@ public class PauseMenuController : MonoBehaviour
     }
     public void Show(int score)
     {
-        _scoreText.text = $"{_text} {score}";
-        gameObject.SetActive(true);
+        if (PlayerManager.Instance.RecordDetected)
+        {
+            _scoreNewRecordText.gameObject.SetActive(true);
+            _scoreNewRecordText.text = $"{newRecordMessage} : {score} !!";
+            _scoreText.gameObject.SetActive(false);
+            Debug.Log(newRecordMessage);
+        }
+        else
+        {
+            _scoreText.gameObject.SetActive(true);
+            _scoreText.text = $"{message} : {score}";
+            _scoreNewRecordText.gameObject.SetActive(false);
+            Debug.Log(message);
+        }
+        _pausePanel.SetActive(true);
     }
     private void Hide()
     {
-        gameObject.SetActive(false);
+        _pausePanel.SetActive(false);
     }
     private void RestartPressed()
     {
@@ -33,8 +49,7 @@ public class PauseMenuController : MonoBehaviour
     }
     private void GoToMenuPressed()
     {
-        Debug.Log("go to menu logic");
-        Hide();
+        GameManager.Instance.LoadScene("MenuScene");
     }
     
 }

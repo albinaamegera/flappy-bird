@@ -19,6 +19,7 @@ public class LevelUIController : MonoBehaviour
         GameManager.Instance.OnCoinCollected += UpdateCoinText;
         GameManager.Instance.OnGameOver += _timer.StartTimer;
         _timer.OnTimerComplete.AddListener(ShowGameOverPanel);
+        UpdateCoinText(PlayerManager.Instance.DataCoins);
     }
     private void UpdateScoreText(int value)
     {

@@ -23,7 +23,8 @@ public class StartPanelUIController : MonoBehaviour
     }
     private void Start()
     {
-        _playBtn.onClick.AddListener(delegate { PlayerManager.Instance.ChangeSkin(_playerSprite.sprite); }); 
+        _playBtn.onClick.AddListener(delegate { PlayerManager.Instance.ChangeSkin(_playerSprite.sprite); });
+        _playBtn.onClick.AddListener(delegate { GameManager.Instance.LoadScene("LevelScene"); });
     }
     private void ChangeSkin(Skin skin)
     {

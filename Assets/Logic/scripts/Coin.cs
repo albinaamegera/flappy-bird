@@ -74,4 +74,9 @@ public class Coin : MonoBehaviour
             .Join(_renderer.DOFade(0, _duration));
         _animation.OnComplete(delegate { gameObject.SetActive(false); });
     }
+    private void OnDestroy()
+    {
+        _rotation.Kill();
+        _animation.Kill();
+    }
 }

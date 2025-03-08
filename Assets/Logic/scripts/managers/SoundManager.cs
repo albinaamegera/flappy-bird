@@ -10,7 +10,13 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+        DontDestroyOnLoad(this);
     }
     public void PlayEffect(AudioClip clip)
     {

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,15 +11,22 @@ public class GameManager : MonoBehaviour
     public Action OnGameOver;
     public Action OnLevelStart;
 
-    [Header("settings")]
-    [SerializeField] private Timer _timer;      // на всякий случай пока не используется
-
     private int _score = 0;
     private int _coins = 0;
 
     private void Awake()
     {
+        if (Instance)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+        DontDestroyOnLoad(this);
+    }
+    private void Start()
+    {
+        _coins = PlayerManager.Instance.DataCoins;
     }
     public void AddScore()
     {
@@ -37,9 +45,13 @@ public class GameManager : MonoBehaviour
         OnCoinCollected?.Invoke(_coins);
         Debug.Log("coin collected");
     }
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
     public void GameOver()
     {
         OnGameOver?.Invoke();
-        Debug.Log("message: gamemanager method invoked");
+        PlayerManager.Instance.UpdateData(_coins, _score);
     }
 }
