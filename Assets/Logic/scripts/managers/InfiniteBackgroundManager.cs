@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class InfiniteBackgroundManager : InfiniteLevelManager
 {
-    protected override void CheckCameraBorders()
+    // event listeners
+    protected EventListener<OnGameStartedEvent> _onGameStartedEventListener = new();
+    protected EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
+    protected EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
+
+    protected override void SetListeners()
     {
-        if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[1].transform.position.x)
-        {
-            MoveLastToFirst();
-        }
+        _onGameStartedEventListener.Add(InstantiateParts);
+        _onGameStartedEventListener.Add(SetPartPositions);
+        _onLevelRestartedEventListener.Add(SetPartPositions);
+        _onLevelExitEventListener.Add(SetPartPositions);
     }
 }

@@ -20,8 +20,8 @@ public class EventBinding<T> : IEventBinding<T> where T : IEvent
         get => _onEventNoArgs;
         set => _onEventNoArgs = value;
     }
-    public EventBinding(Action<T> onEvent) => _onEvent = onEvent;
-    public EventBinding(Action onEventNoArgs) => _onEventNoArgs = onEventNoArgs;
+    //public EventBinding(Action<T> onEvent) => _onEvent = onEvent;
+    //public EventBinding(Action onEventNoArgs) => _onEventNoArgs = onEventNoArgs;
 
     public void Add(Action<T> onEvent) => _onEvent += onEvent;
     public void Add(Action onEventNoArgs) => _onEventNoArgs += onEventNoArgs;

@@ -1,4 +1,5 @@
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class InfiniteLevelManager : MonoBehaviour
@@ -7,46 +8,73 @@ public class InfiniteLevelManager : MonoBehaviour
     [SerializeField] protected LevelPart _levelpart;
     [SerializeField] protected Timer _timer;
     [SerializeField] protected float _startXPos;
-    //[SerializeField] private float _levelpartWidth;
+    [SerializeField] protected float _cameraXBorderOffset;
     [SerializeField] protected int _partsCount;
 
     protected LevelPart[] _partsOnLevel;
     protected Camera _camera;
     protected float _cameraHalfWidth;
+
+    // listeners
+    private EventListener<OnLevelStartedEvent> _onLevelStartEventListener = new();
+    private EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
+    private EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
+
     private void Awake()
     {
         _camera = Camera.main;
         _cameraHalfWidth = _camera.orthographicSize * _camera.aspect;
+        SetListeners();
     }
     private void Start()
     {
-        PrepareLevel();
-
         _timer.OnTimerComplete.AddListener(CheckCameraBorders);
-        _timer.StartTimer();
     }
-    private void PrepareLevel()
+    protected virtual void SetListeners()
+    {
+        _onLevelStartEventListener.Add(InstantiateParts);
+        _onLevelStartEventListener.Add(SetPartPositions);
+        _onLevelRestartedEventListener.Add(SetPartPositions);
+        _onLevelExitEventListener.Add(ClearParts);
+    }
+    protected void InstantiateParts()
     {
         _partsOnLevel = new LevelPart[_partsCount];
 
         for (int i = 0; i < _partsCount; i++)
         {
-            //var x = _startXPos + i * _levelpartWidth;
-            var part = Instantiate(_levelpart, Vector2.zero, Quaternion.identity);
+            _partsOnLevel[i] = Instantiate(_levelpart, Vector2.zero, Quaternion.identity);
+        }
+    }
+    protected void SetPartPositions()
+    {
+        _timer.ResetTimer();
+
+        for (int i = 0; i < _partsCount; i++)
+        {
             if (i == 0)
             {
-                part.Move(_startXPos);
+                _partsOnLevel[i].Move(_startXPos);
             }
             else
             {
-                part.Move(_partsOnLevel[i - 1].transform.position.x);
+                _partsOnLevel[i].Move(_partsOnLevel[i - 1].transform.position.x);
             }
-            _partsOnLevel[i] = part;
         }
+
+        _timer.StartTimer();
     }
-    protected virtual void CheckCameraBorders()
+    protected void ClearParts()
     {
-        if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[0].transform.position.x)
+        for (int i = _partsCount - 1; i >= 0; i--)
+        {
+            Destroy(_partsOnLevel[i].gameObject);
+        }
+        _timer.StopTimer();
+    }
+    protected void CheckCameraBorders()
+    {
+        if (_camera.transform.position.x - _cameraHalfWidth > _partsOnLevel[0].transform.position.x + _cameraXBorderOffset)
         {
             MoveLastToFirst();
         }

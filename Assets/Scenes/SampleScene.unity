@@ -481,6 +481,7 @@ MonoBehaviour:
   _levelpart: {fileID: 6306438344861887171, guid: 31223e9da8a4372499dadd99c49ca90f, type: 3}
   _timer: {fileID: 673211142}
   _startXPos: -19.44
+  _cameraXBorderOffset: 10
   _partsCount: 4
 --- !u!4 &673211144
 Transform:
@@ -529,7 +530,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelpart: {fileID: 4148602656570836210, guid: cbef4a974aa91e342a931d12a3b81592, type: 3}
   _timer: {fileID: 1035771905}
-  _startXPos: 10
+  _startXPos: 5
+  _cameraXBorderOffset: 5
   _partsCount: 5
 --- !u!4 &1035771904
 Transform:
@@ -705,6 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2042125973}
+  - component: {fileID: 2042125974}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -727,13 +730,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2042125974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042125972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d3d4ccec23dba4cb212f55138f93d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 2042125973}
   - {fileID: 1919464633}
   - {fileID: 1035771904}
   - {fileID: 673211144}
-  - {fileID: 2042125973}
