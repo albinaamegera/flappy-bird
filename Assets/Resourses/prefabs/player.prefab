@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 7601055141508874299}
   - component: {fileID: 6058202012756477342}
   - component: {fileID: 7681961704266525800}
+  - component: {fileID: 6413985445231562906}
   - component: {fileID: 1509911301888759849}
   - component: {fileID: 6720464973899513631}
   m_Layer: 0
@@ -163,6 +164,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a687ed44a94895409a46a985223de5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6413985445231562906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051703161082222578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d25d6ea6f78ce48b9e599742f2b722, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 6892260187651285555}
+  rotationSpeed: 90
+  maxUpAngle: 30
+  maxDownAngle: -26.8
 --- !u!58 &1509911301888759849
 CircleCollider2D:
   m_ObjectHideFlags: 0
