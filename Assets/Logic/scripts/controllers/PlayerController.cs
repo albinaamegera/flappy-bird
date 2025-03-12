@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         EnableControls();
         SetPosition();
+        SendTransform();
     }
     public void Restart()
     {
@@ -40,4 +41,5 @@ public class PlayerController : MonoBehaviour
         _controls.Player.PlayerAction.performed -= c => _controller.Jump();
         _controls.Player.Disable();
     }
+    private void SendTransform() => EventBus<OnPlayerTransform>.RaiseEvent(new OnPlayerTransform() { transform = _transform });
 }
