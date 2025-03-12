@@ -13,5 +13,6 @@ public class CoinControllerEditor : Editor
         {
             controller.Collect();
         }
+
     }
 }

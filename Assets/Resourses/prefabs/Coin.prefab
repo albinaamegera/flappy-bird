@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2989748459424098724}
   - component: {fileID: 8934845541473904825}
+  - component: {fileID: 6068119717088959477}
   - component: {fileID: 3363157156811237232}
   - component: {fileID: 4065086968652940613}
   m_Layer: 0
@@ -47,6 +48,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04b93fd8ee91be4e9c663c26c7473f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _collectCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6068119717088959477}
+        m_TargetAssemblyTypeName: CoinAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6068119717088959477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211852958552370603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7955e16e7f29843428d8609a27cdb6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 2853517172834961357}
+  _transform: {fileID: 5943865551071853144}
+  _fadeDuration: 0.59
+  _moveUpDuration: 0.61
+  _endYValue: 1
+  _destroyOnComplete: 1
 --- !u!114 &3363157156811237232
 MonoBehaviour:
   m_ObjectHideFlags: 0
