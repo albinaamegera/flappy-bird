@@ -1,0 +1,502 @@
+fileFormatVersion: 2
+guid: 8cbb31acfcaa58c4eb3781860f096b0d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1110126541007599292
+    second: coins-chests-etc-2-0_0
+  - first:
+      213: 6677371199585168653
+    second: coins-chests-etc-2-0_1
+  - first:
+      213: 3179439825839413324
+    second: coins-chests-etc-2-0_2
+  - first:
+      213: -4783615127557352424
+    second: coins-chests-etc-2-0_3
+  - first:
+      213: 3546711308377936960
+    second: coins-chests-etc-2-0_4
+  - first:
+      213: -2976798012191111905
+    second: coins-chests-etc-2-0_5
+  - first:
+      213: -384133781660307682
+    second: coins-chests-etc-2-0_6
+  - first:
+      213: 7428233801177773207
+    second: coins-chests-etc-2-0_7
+  - first:
+      213: -6885073698904915356
+    second: coins-chests-etc-2-0_8
+  - first:
+      213: -5053005104965179263
+    second: coins-chests-etc-2-0_9
+  - first:
+      213: 5781152556637011241
+    second: coins-chests-etc-2-0_10
+  - first:
+      213: 47853134441211810
+    second: coins-chests-etc-2-0_11
+  - first:
+      213: -8547117569818187076
+    second: coins-chests-etc-2-0_12
+  - first:
+      213: 5986398663914978439
+    second: coins-chests-etc-2-0_13
+  - first:
+      213: -7693507295091667559
+    second: coins-chests-etc-2-0_14
+  - first:
+      213: 8435045845211337512
+    second: coins-chests-etc-2-0_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coin_golden
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449428beac90890f0800000000000000
+      internalID: -1110126541007599292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e73de8ee26caf499c6131a86899a9f
+      internalID: 1504949037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa61e96b26e3e14d8d7c37102732e7a
+      internalID: -963890963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900a8a0b8dd15264c9aa749947674308
+      internalID: -577183579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim3
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9f348071078444f845a151ac6d3fde
+      internalID: 353634418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5cbe51d6010744ea276f6a4cb51c70
+      internalID: -731308294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65eb2b00e1e942d418f9980273908e82
+      internalID: 888648570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f24669b80e46554cba82ee0ed46ef95
+      internalID: 1818741757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim7
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f5a1856452c1f448bbb25af574d293
+      internalID: 1437727534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim8
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1395c507d2ea0a46aa23917a842957c
+      internalID: -39553632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a66ccc46ad80ac4a8c629d491ce7c30
+      internalID: 1684441891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim10
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848049c666ad3814989dba27d9bd6640
+      internalID: 1156174830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9b4a9451cb5b041899ee629d3dddf7
+      internalID: -1993627601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin_golden_anim12
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1008
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba1f29b73eab5d4ca15ce4100c2392b
+      internalID: 1447638862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f57a52d720bb6f4a8b6bcde4f28efd9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      coin_golden: -1110126541007599292
+      coin_golden_anim0: 1504949037
+      coin_golden_anim1: -963890963
+      coin_golden_anim10: 1156174830
+      coin_golden_anim11: -1993627601
+      coin_golden_anim12: 1447638862
+      coin_golden_anim2: -577183579
+      coin_golden_anim3: 353634418
+      coin_golden_anim4: -731308294
+      coin_golden_anim5: 888648570
+      coin_golden_anim6: 1818741757
+      coin_golden_anim7: 1437727534
+      coin_golden_anim8: -39553632
+      coin_golden_anim9: 1684441891
+      coins-chests-etc-2-0_1: 6677371199585168653
+      coins-chests-etc-2-0_10: 5781152556637011241
+      coins-chests-etc-2-0_11: 47853134441211810
+      coins-chests-etc-2-0_12: -8547117569818187076
+      coins-chests-etc-2-0_13: 5986398663914978439
+      coins-chests-etc-2-0_14: -7693507295091667559
+      coins-chests-etc-2-0_15: 8435045845211337512
+      coins-chests-etc-2-0_2: 3179439825839413324
+      coins-chests-etc-2-0_3: -4783615127557352424
+      coins-chests-etc-2-0_4: 3546711308377936960
+      coins-chests-etc-2-0_5: -2976798012191111905
+      coins-chests-etc-2-0_6: -384133781660307682
+      coins-chests-etc-2-0_7: 7428233801177773207
+      coins-chests-etc-2-0_8: -6885073698904915356
+      coins-chests-etc-2-0_9: -5053005104965179263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

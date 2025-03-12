@@ -11,3 +11,4 @@ public struct OnPlayerTransform : IEvent
 {
     public Transform transform;
 }
+public struct OnCoinCollected : IEvent { }
