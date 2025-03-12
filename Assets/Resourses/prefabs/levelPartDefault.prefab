@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197432717618334440}
   - component: {fileID: 4148602656570836210}
+  - component: {fileID: 9143020956055044617}
   - component: {fileID: 779171293476350356}
   m_Layer: 0
   m_Name: levelPartDefault
@@ -122,8 +123,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5233885162454348065}
-  - {fileID: 7153590699259156754}
+  - {fileID: 2943378484653899980}
   - {fileID: 1800949559757717555}
   - {fileID: 449658242477619585}
   m_Father: {fileID: 0}
@@ -155,6 +155,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9143020956055044617}
+        m_TargetAssemblyTypeName: LevelPartsTubesMover, Assembly-CSharp
+        m_MethodName: Shift
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9143020956055044617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131934804346971019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16412f4ea264c6d4ba1190c79d3de235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transform: {fileID: 2943378484653899980}
+  _maxYShift: 2.3
 --- !u!61 &779171293476350356
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,6 +227,39 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.43}
   m_EdgeRadius: 0
+--- !u!1 &5421714040507455677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2943378484653899980}
+  m_Layer: 0
+  m_Name: tubesHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2943378484653899980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5421714040507455677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5233885162454348065}
+  - {fileID: 7153590699259156754}
+  m_Father: {fileID: 1197432717618334440}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6844726442705020648
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +272,7 @@ GameObject:
   - component: {fileID: 5006678300133619074}
   - component: {fileID: 4790946308057861889}
   m_Layer: 6
-  m_Name: default (1)
+  m_Name: lowerTube
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,11 +287,11 @@ Transform:
   m_GameObject: {fileID: 6844726442705020648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7156, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9279, z: 0}
   m_LocalScale: {x: 1, y: 1.0199, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1197432717618334440}
+  m_Father: {fileID: 2943378484653899980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5006678300133619074
 SpriteRenderer:
@@ -283,7 +342,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.32, y: 0.9246699}
+  m_Size: {x: 0.32, y: 1.3408433}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -328,12 +387,12 @@ BoxCollider2D:
     border: {x: 0, y: 0.22999999, z: 0, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.32, y: 0.8}
-    newSize: {x: 0.32, y: 0.9246699}
+    newSize: {x: 0.32, y: 1.3408433}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.91}
+  m_Size: {x: 0.32, y: 1.33}
   m_EdgeRadius: 0
 --- !u!1 &8715820440571381631
 GameObject:
@@ -395,7 +454,7 @@ GameObject:
   - component: {fileID: 1222489759313754356}
   - component: {fileID: 5778739935516663534}
   m_Layer: 6
-  m_Name: default
+  m_Name: upperTube
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,11 +469,11 @@ Transform:
   m_GameObject: {fileID: 8748485132542696914}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7419, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9574, z: 0}
   m_LocalScale: {x: 1, y: 1.0199, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1197432717618334440}
+  m_Father: {fileID: 2943378484653899980}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1222489759313754356
 SpriteRenderer:
@@ -465,7 +524,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 0.32, y: 0.8571405}
+  m_Size: {x: 0.32, y: 1.2798562}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -510,10 +569,10 @@ BoxCollider2D:
     border: {x: 0, y: 0.22999999, z: 0, w: 0.25}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.32, y: 0.8}
-    newSize: {x: 0.32, y: 0.8571405}
+    newSize: {x: 0.32, y: 1.2798562}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 0.86}
+  m_Size: {x: 0.32, y: 1.27}
   m_EdgeRadius: 0
