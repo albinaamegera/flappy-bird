@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 _startPosition;
 
     PlayerMovementController _controller;
+    CircleCollider2D _collider;
     Transform _transform;
     Controls _controls;
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         _controls = new();
         _controller = GetComponent<PlayerMovementController>();
+        _collider = GetComponent<CircleCollider2D>();
         _transform = transform;
     }
     public void Setup()
@@ -23,7 +25,20 @@ public class PlayerController : MonoBehaviour
     }
     public void Restart()
     {
+        Enable();
         SetPosition();
+    }
+    public void Disable()
+    {
+        DisableControls();
+        _controller.Disable();
+        _collider.enabled = false;
+    }
+    public void Enable()
+    {
+        _collider.enabled = true;
+        _controller.Enable();
+        EnableControls();
     }
     public void Remove()
     {

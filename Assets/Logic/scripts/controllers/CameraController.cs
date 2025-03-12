@@ -4,19 +4,29 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private CameraFollowController _followController;
-    // camera shake
+    private CameraShake2D _cameraShaker;
 
     // event listeners
     private EventListener<OnPlayerTransform> _onOlayerTransformEventListener = new();
     private EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
-    // event listener for camera shake
+    private EventListener<OnPlayerCollision> _onPlayerCollisionEvent = new();
     private void Awake()
     {
         _followController = GetComponent<CameraFollowController>();
+        _cameraShaker = GetComponent<CameraShake2D>();
         _onOlayerTransformEventListener.Add(e => SetTarget(e.transform));
         _onLevelExitEventListener.Add(SetDefaultPosition);
+        _onPlayerCollisionEvent.Add(TriggerShake);
     }
     private void SetTarget(Transform target) => _followController.SetTarget(target);
     private void SetDefaultPosition() => _followController.ResetPosition();
-    // camera shake method
+    private void TriggerShake()
+    {
+        if (_cameraShaker == null)
+        {
+            Debug.LogWarning("camera shaker is null");
+            return;
+        }
+        _cameraShaker.TriggerShake();
+    }
 }

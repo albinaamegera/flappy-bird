@@ -9,20 +9,36 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float _jumpForce;
 
     Rigidbody2D _rb;
+    bool _canMove = true;
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
     {
-        _rb.linearVelocity = new Vector2(_speed * Time.fixedDeltaTime, _rb.linearVelocityY);
+        if (_canMove)
+        {
+            _rb.linearVelocity = new Vector2(_speed * Time.fixedDeltaTime, _rb.linearVelocityY);
+        }
+        
     }
     public void Jump()
     {
+        if (!_canMove) return;
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
     }
-    public void Restart()
+    private void Restart()
     {
         _rb.linearVelocity = Vector2.zero;
+    }
+    public void Enable()
+    {
+        _canMove = true;
+        Restart();
+    }
+    public void Disable()
+    {
+        _canMove = false;
+        Restart();
     }
 }
