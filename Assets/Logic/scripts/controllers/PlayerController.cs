@@ -1,43 +1,43 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerMovementController))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("settings")]
-    [Tooltip("скорость движения персонажа")]
-    [SerializeField] private float _speed;
-    [Tooltip("сила прыжка персонажа")]
-    [SerializeField] private float _jumpForce;
-    [Tooltip("слой препятствий")]
-    [SerializeField] private LayerMask _obstacleLayer;
+    [SerializeField] private Vector3 _startPosition;
 
+    PlayerMovementController _controller;
     Transform _transform;
-    Rigidbody2D _rb;
     Controls _controls;
 
     private void Awake()
     {
-        _transform = transform;
-        _rb = GetComponent<Rigidbody2D>();
         _controls = new();
+        _controller = GetComponent<PlayerMovementController>();
+        _transform = transform;
     }
-    private void Start()
+    public void Setup()
+    {
+        EnableControls();
+        SetPosition();
+    }
+    public void Restart()
+    {
+        SetPosition();
+    }
+    public void Remove()
+    {
+        DisableControls();
+        Destroy(gameObject);
+    }
+    private void SetPosition() => _transform.position = _startPosition;
+    private void EnableControls()
     {
         _controls.Player.Enable();
-        _controls.Player.PlayerAction.performed += c => Jump();
+        _controls.Player.PlayerAction.performed += c => _controller.Jump();
     }
-    private void FixedUpdate()
+    private void DisableControls()
     {
-        _rb.linearVelocity = new Vector2(_speed * Time.fixedDeltaTime, _rb.linearVelocityY);
-    }
-    private void Jump()
-    {
-        _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Obstacle")
-        {
-            Debug.Log("game over");
-        }
+        _controls.Player.PlayerAction.performed -= c => _controller.Jump();
+        _controls.Player.Disable();
     }
 }
