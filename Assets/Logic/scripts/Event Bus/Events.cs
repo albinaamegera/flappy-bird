@@ -13,3 +13,7 @@ public struct OnPlayerTransform : IEvent
 }
 public struct OnCoinCollected : IEvent { }
 public struct OnPointCollected : IEvent { }
+public struct OnSoundEffectTriggered : IEvent
+{
+    public AudioClip clip;
+}

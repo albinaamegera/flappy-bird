@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8934845541473904825}
   - component: {fileID: 6068119717088959477}
   - component: {fileID: 3363157156811237232}
+  - component: {fileID: 1374795502427150452}
   - component: {fileID: 4065086968652940613}
   m_Layer: 0
   m_Name: Coin
@@ -63,6 +64,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1374795502427150452}
+        m_TargetAssemblyTypeName: SoundEffectTrigger, Assembly-CSharp
+        m_MethodName: TriggerEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6068119717088959477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +93,6 @@ MonoBehaviour:
   _fadeDuration: 0.59
   _moveUpDuration: 0.61
   _endYValue: 1
-  _destroyOnComplete: 1
 --- !u!114 &3363157156811237232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +120,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1374795502427150452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211852958552370603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7f6af55239d604fb74590ecbfcb5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentClip: {fileID: 8300000, guid: d45f15d8ba369024ea22e8b2930db3f1, type: 3}
 --- !u!58 &4065086968652940613
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -220,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1110126541007599292, guid: 8cbb31acfcaa58c4eb3781860f096b0d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
