@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMovementController))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("settings")]
     [SerializeField] private Vector3 _startPosition;
 
     PlayerMovementController _controller;

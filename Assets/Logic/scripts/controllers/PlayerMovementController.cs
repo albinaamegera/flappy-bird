@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float _speed;
     [Tooltip("сила прыжка персонажа")]
     [SerializeField] private float _jumpForce;
+
+    [Header("callbacks")]
+    [Tooltip("jump callback")]
+    [SerializeField] private UnityEvent _jumpCallback;
 
     Rigidbody2D _rb;
     bool _canMove = true;
@@ -26,6 +31,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         if (!_canMove) return;
         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, _jumpForce);
+        _jumpCallback.Invoke();
     }
     private void Restart()
     {
