@@ -1,10 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CoinViewController : MonoBehaviour
 {
     [Header("View Components")]
     [SerializeField] private TMP_Text _text;
+
+    [Header("callbacks")]
+    [SerializeField] private UnityEvent _onViewUpdate;
 
     private int _coins = 0;
 
@@ -21,5 +25,9 @@ public class CoinViewController : MonoBehaviour
         _coins++;
         UpdateView();
     }
-    private void UpdateView() => _text.text = _coins.ToString();
+    private void UpdateView()
+    {
+        _text.text = _coins.ToString();
+        _onViewUpdate.Invoke();
+    }
 }

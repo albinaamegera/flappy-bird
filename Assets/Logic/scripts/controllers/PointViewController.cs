@@ -1,9 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PointViewController : MonoBehaviour
 {
+    [Header("ui references")]
     [SerializeField] private TMP_Text _text;
+
+    [Header("callbacks")]
+    [SerializeField] private UnityEvent _onViewUpdated;
 
     private int _counter = 0;
 
@@ -27,5 +32,9 @@ public class PointViewController : MonoBehaviour
         _counter++;
         UpdateView();
     }
-    private void UpdateView() => _text.text = _counter.ToString();
+    private void UpdateView()
+    {
+        _text.text = _counter.ToString();
+        _onViewUpdated.Invoke();
+    }
 }

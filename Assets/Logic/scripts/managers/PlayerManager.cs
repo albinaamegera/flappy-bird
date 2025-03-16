@@ -27,6 +27,6 @@ public class PlayerManager : MonoBehaviour
         _player.Setup();
     }
     private void ResetPlayer() => _player.Restart();
-    private void RemovePlayer() => _player.Remove();
     private void DisablePlayer() => _player.Disable();
+    private void RemovePlayer() => _player.Remove();
 }
