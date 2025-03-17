@@ -406,7 +406,7 @@ TextureImporter:
         width: 30
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 3, y: 4, z: 3, w: 4}
       customData: 
       outline: []
@@ -428,7 +428,7 @@ TextureImporter:
         width: 30
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 3, y: 4, z: 3, w: 4}
       customData: 
       outline: []
@@ -450,7 +450,7 @@ TextureImporter:
         width: 30
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 3, y: 4, z: 3, w: 4}
       customData: 
       outline: []
@@ -459,6 +459,28 @@ TextureImporter:
       bones: []
       spriteID: a549bcd8e5696444c95824ec5749cbb5
       internalID: -404829771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: home_icon
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 213
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afede39d1d4af04da06f84ac7ffbf58
+      internalID: 71223280
       vertices: []
       indices: 
       edges: []
@@ -573,6 +595,7 @@ TextureImporter:
       button: -1992228396
       button_disabled: -404829771
       button_pressed: 190451144
+      home_icon: 71223280
       menu_panel: -7151958888795693489
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

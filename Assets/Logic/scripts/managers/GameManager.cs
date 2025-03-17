@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    // event listeners
+    private EventListener<OnGameExitEvent> _onGameExitEventListener = new();
+    private void Awake()
+    {
+        _onGameExitEventListener.Add(Exit);
+    }
     private void Start()
     {
         EventBus<OnGameStartedEvent>.RaiseEvent(new OnGameStartedEvent());
@@ -17,5 +23,10 @@ public class GameManager : MonoBehaviour
     public void EndLevel()
     {
         EventBus<OnLevelExitEvent>.RaiseEvent(new OnLevelExitEvent());
+    }
+    private void Exit()
+    {
+        Debug.Log("close application");
+        Application.Quit();
     }
 }

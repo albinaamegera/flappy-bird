@@ -3,6 +3,7 @@ using UnityEngine;
 public interface IEvent { }
 
 public struct OnGameStartedEvent : IEvent { }
+public struct OnGameExitEvent : IEvent { }
 public struct OnLevelStartedEvent : IEvent { }
 public struct OnLevelRestartedEvent : IEvent { }
 public struct OnLevelExitEvent : IEvent { }

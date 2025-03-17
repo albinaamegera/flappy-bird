@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LevelPanelViewController : ViewController
+public class LevelPanelViewController : PanelViewController
 {
     [Header("ui references")]
     [field : SerializeField] private ViewController _pauseController;
@@ -15,12 +15,8 @@ public class LevelPanelViewController : ViewController
     }
     public override void Hide()
     {
+        HideController();
         base.Hide();
-    }
-
-    public override void Show()
-    {
-        base.Show();
     }
     private void ShowController() => _pauseController.Show();
     private void HideController() => _pauseController.Hide();
