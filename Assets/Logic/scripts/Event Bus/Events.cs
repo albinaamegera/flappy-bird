@@ -18,3 +18,7 @@ public struct OnSoundEffectTriggered : IEvent
 {
     public AudioClip clip;
 }
+public struct OnTubButtonPressed : IEvent
+{
+    public int id;
+}
