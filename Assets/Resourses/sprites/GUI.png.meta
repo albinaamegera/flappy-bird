@@ -472,7 +472,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -481,6 +481,72 @@ TextureImporter:
       bones: []
       spriteID: 8afede39d1d4af04da06f84ac7ffbf58
       internalID: 71223280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titles_icon
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 229
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba0389748a93c54d8ef3f27446cd3ba
+      internalID: -620029496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locked_icon
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 227
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9990e521af13e3489980dd7b6ed8996
+      internalID: 559483531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: check_icon
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 229
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a677eabcd8859b247becbc04991d9036
+      internalID: 2110973853
       vertices: []
       indices: 
       edges: []
@@ -595,8 +661,11 @@ TextureImporter:
       button: -1992228396
       button_disabled: -404829771
       button_pressed: 190451144
+      check_icon: 2110973853
       home_icon: 71223280
+      locked_icon: 559483531
       menu_panel: -7151958888795693489
+      titles_icon: -620029496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

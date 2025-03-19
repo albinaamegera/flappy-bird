@@ -11,10 +11,14 @@ public class SoundManager : MonoBehaviour
 
     // event listeners
     private EventListener<OnSoundEffectTriggered> _onSoundEffectEventListener = new();
+    private EventListener<OnMusicToggleValueChanged> _onMusicMuteEventListener = new();
+    private EventListener<OnEffectsToggleValueChanged> _onEffectsMuteEventListener = new();
 
     private void Awake()
     {
         _onSoundEffectEventListener.Add(e => PlaySoundEffect(e.clip));
+        _onMusicMuteEventListener.Add(e => _mainSource.mute = !e.value);
+        _onEffectsMuteEventListener.Add(e => _effectsSource.mute = !e.value);
     }
     private void PlaySoundEffect(AudioClip clip)
     {

@@ -22,3 +22,11 @@ public struct OnTubButtonPressed : IEvent
 {
     public int id;
 }
+public struct OnMusicToggleValueChanged : IEvent
+{
+    public bool value;
+}
+public struct OnEffectsToggleValueChanged : IEvent
+{
+    public bool value;
+}
