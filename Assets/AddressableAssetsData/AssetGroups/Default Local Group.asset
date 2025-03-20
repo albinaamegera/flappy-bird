@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4644db1b4c7453b4cbec3dfae4f601d8
+    m_Address: Assets/Resourses/localization
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86e89b15fa4f94c439c1c2daf081fc5f
     m_Address: Assets/Resourses/prefabs/player.prefab
     m_ReadOnly: 0
@@ -47,6 +52,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da5c7a399c9f37748b6f9a43784787a4
     m_Address: Assets/Resourses/sprite atlaces/PlayerSprites.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efa195c89ea3cd04f84cce3db616fed2
+    m_Address: Assets/Resourses/localization/Localization Settings.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
