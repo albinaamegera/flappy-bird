@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinPrefab: {fileID: 211852958552370603, guid: 3277db9c88968e74fbc179b2764e9f73, type: 3}
-  _maxYOffset: 4.01
+  _maxYOffset: 3.75
   _maxXOffset: 1.19
   _spawnFactor: 70.1
 --- !u!1 &8748485132542696914

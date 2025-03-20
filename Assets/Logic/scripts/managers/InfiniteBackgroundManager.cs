@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class InfiniteBackgroundManager : InfiniteLevelManager
 {
     // event listeners

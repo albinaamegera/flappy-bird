@@ -14,7 +14,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: adc11e87258a3ea46a54c1be77e14817
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 2c3e20cbc89153f4e9ef19c6552943fa
+    m_Address: Assets/Resourses/sprite atlaces/GameSprites.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31223e9da8a4372499dadd99c49ca90f
+    m_Address: Assets/Resourses/prefabs/backgroundPart.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3277db9c88968e74fbc179b2764e9f73
+    m_Address: Assets/Resourses/prefabs/Coin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3717f420415d7c94c98c538d685e3f11
+    m_Address: Assets/Resourses/prefabs/Button.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86e89b15fa4f94c439c1c2daf081fc5f
+    m_Address: Assets/Resourses/prefabs/player.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cbef4a974aa91e342a931d12a3b81592
+    m_Address: Assets/Resourses/prefabs/levelPartDefault.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da5c7a399c9f37748b6f9a43784787a4
+    m_Address: Assets/Resourses/sprite atlaces/PlayerSprites.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbc4910c90fa8bb4b8536bde302f45f6
+    m_Address: Assets/Resourses/sprite atlaces/UI&Icons.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 50325848574f6e641a9727e320fdb481, type: 2}
   m_SchemaSet:
