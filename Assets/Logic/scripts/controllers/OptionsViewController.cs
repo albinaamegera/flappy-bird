@@ -6,15 +6,21 @@ public class OptionsViewController : ViewController
     [Header("ui references")]
     [SerializeField] private Toggle _musicToggle;
     [SerializeField] private Toggle _effectsToggle;
+    [SerializeField] private Button _languageSwitcherBtn;
 
     private void Awake()
     {
         _musicToggle.onValueChanged.AddListener(ToggleMusic);
         _effectsToggle.onValueChanged.AddListener(ToggleEffects);
+        _languageSwitcherBtn.onClick.AddListener(SwitchLanguage);
     }
     private void Start()
     {
         CheckToggles();
+    }
+    private void SwitchLanguage()
+    {
+        EventBus<OnLocaleChanged>.RaiseEvent(new OnLocaleChanged());
     }
     private void CheckToggles()
     {

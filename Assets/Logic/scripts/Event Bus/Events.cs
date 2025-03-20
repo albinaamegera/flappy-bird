@@ -30,3 +30,4 @@ public struct OnEffectsToggleValueChanged : IEvent
 {
     public bool value;
 }
+public struct OnLocaleChanged : IEvent { }

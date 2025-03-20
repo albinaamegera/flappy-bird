@@ -1,4 +1,5 @@
 using DG.Tweening;
+using UnityEditor.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class PlayerIconAnimator : MonoBehaviour
@@ -17,6 +18,11 @@ public class PlayerIconAnimator : MonoBehaviour
     }
     public void Animate()
     {
+        if (_sequence.IsActive())
+        {
+            _sequence.TogglePause();
+            return;
+        }
         _sequence = DOTween.Sequence();
         _sequence
             .Append(_transform.DOScale(_endValue, _duration))
@@ -25,6 +31,10 @@ public class PlayerIconAnimator : MonoBehaviour
             .SetEase(_ease);
     }
     public void StopAnimate()
+    {
+        _sequence.TogglePause();
+    }
+    private void OnDestroy()
     {
         _sequence.Kill();
     }
