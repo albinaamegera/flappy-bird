@@ -16,6 +16,7 @@ public abstract class ViewController : MonoBehaviour, IViewController
             _current.alpha = 0;
         if (_canBeInteractable)
             _current.interactable = false;
+        _current.blocksRaycasts = false;
         _onHide.Invoke();
     }
     public virtual void Show()
@@ -24,6 +25,7 @@ public abstract class ViewController : MonoBehaviour, IViewController
             _current.alpha = 1;
         if (_canBeInteractable)
             _current.interactable = true;
+        _current.blocksRaycasts = true;
         _onShow.Invoke();
     }
 }

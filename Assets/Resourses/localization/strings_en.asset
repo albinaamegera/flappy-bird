@@ -50,6 +50,15 @@ MonoBehaviour:
     m_Localized: english
     m_Metadata:
       m_Items: []
+  - m_Id: 18098190987264
+    m_Localized: browse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17975482429440
+    m_Localized: thank you for playing my game! please, support me by following my
+      social media
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

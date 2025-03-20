@@ -51,6 +51,14 @@ MonoBehaviour:
     m_Key: menu_options_language
     m_Metadata:
       m_Items: []
+  - m_Id: 17975482429440
+    m_Key: menu_titles_header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18098190987264
+    m_Key: menu_titles_button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
