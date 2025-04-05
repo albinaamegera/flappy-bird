@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bde38a56892fa1409398975ab5b3839, type: 3}
-  m_Name: birds
+  m_Name: skins content
   m_EditorClassIdentifier: 
   _items:
-  - {fileID: 11400000, guid: eccb7569ec748c645b5933a762158c28, type: 2}
   - {fileID: 11400000, guid: 04e300a819805954c9f0e674e3d20881, type: 2}
+  - {fileID: 11400000, guid: eccb7569ec748c645b5933a762158c28, type: 2}
   - {fileID: 11400000, guid: 522d02a429d99c04a8716c67ee29c61e, type: 2}
   - {fileID: 11400000, guid: 02a6682fd4ed4e5439c35590f537fa91, type: 2}
   - {fileID: 11400000, guid: 289e2d6cfad81834dac6960cc0e886c5, type: 2}
