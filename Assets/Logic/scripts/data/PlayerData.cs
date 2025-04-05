@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,13 @@ public class PlayerData
         _money = data.Money;
         _selectedSkin = data.SelectedSkin;
         _openedSkins = new List<ShopItem> { _selectedSkin };
+    }
+    [JsonConstructor]
+    public PlayerData(int money, ShopItem selectedSkin, List<ShopItem> openedSkins)
+    {
+        _money = money;
+        _selectedSkin = selectedSkin;
+        _openedSkins = new List<ShopItem>(openedSkins);
     }
     public int Money
     {
