@@ -13,6 +13,10 @@ public struct OnPlayerTransform : IEvent
     public Transform transform;
 }
 public struct OnCoinCollected : IEvent { }
+public struct OnCoinValueChanged : IEvent
+{
+    public int value { get; set; }
+}
 public struct OnPointCollected : IEvent { }
 public struct OnSoundEffectTriggered : IEvent
 {

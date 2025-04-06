@@ -10,24 +10,17 @@ public class CoinViewController : MonoBehaviour
     [Header("callbacks")]
     [SerializeField] private UnityEvent _onViewUpdate;
 
-    private int _coins = 0;
-
     // listeners
-    private EventListener<OnCoinCollected> _onCoinCollectedEventListener = new();
+    private EventListener<OnCoinValueChanged> _onCoinValueChangedEventListener = new();
     // todo : on ubdate coins listener to show current value
 
     private void Awake()
     {
-        _onCoinCollectedEventListener.Add(OnCollectCoin);
+        _onCoinValueChangedEventListener.Add(e => UpdateView(e.value));
     }
-    private void OnCollectCoin()
+    private void UpdateView(int value)
     {
-        _coins++;
-        UpdateView();
-    }
-    private void UpdateView()
-    {
-        _text.text = _coins.ToString();
+        _text.text = value.ToString();
         _onViewUpdate.Invoke();
     }
 }
