@@ -1,16 +1,9 @@
-using UnityEngine;
-
-public class ShopItemSelector : MonoBehaviour
+public class ShopItemSelector : IShopItemVisitor
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private IPersistentData _persistentData;
+    public ShopItemSelector(IPersistentData persistentData) => _persistentData = persistentData;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void Visit(IShopItemVisitable item) => item.Accept(this);
+
+    public void Visit(PlayerSkinItem item) => _persistentData.PlayerData.SelectSkin(item);
 }

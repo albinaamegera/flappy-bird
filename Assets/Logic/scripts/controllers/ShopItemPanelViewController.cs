@@ -31,8 +31,13 @@ public class ShopItemPanelViewController : MonoBehaviour
     private void ShowItem(int nextIndex)
     {
         _currentIndex += nextIndex;
-        _itemView.UpdateView(_currentContent.Items.ElementAt(_currentIndex));
+        UpdateView();
         CheckButtons();
+    }
+    private void UpdateView()
+    {
+        // update shop item view
+        // update buttons
     }
     private void OnDestroy()
     {

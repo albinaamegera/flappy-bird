@@ -11,5 +11,6 @@ public class TextValueView<T> : MonoBehaviour where T : IConvertible
         _textComponent.text = value.ToString();
         gameObject.SetActive(true);
     }
+    public void SetColor(Color color) => _textComponent.color = color;
     public void Hide() => gameObject.SetActive(false);
 }
