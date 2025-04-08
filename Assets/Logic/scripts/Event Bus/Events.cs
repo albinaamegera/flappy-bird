@@ -35,3 +35,9 @@ public struct OnEffectsToggleValueChanged : IEvent
     public bool value;
 }
 public struct OnLocaleChanged : IEvent { }
+public struct OnDataInitialized : IEvent
+{
+    public IPersistentData persistentData;
+    public Wallet wallet;
+}
+public struct OnDataSave : IEvent { }

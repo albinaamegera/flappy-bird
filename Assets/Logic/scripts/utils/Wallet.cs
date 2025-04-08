@@ -13,6 +13,8 @@ public class Wallet
         _money = _persistentData.PlayerData.Money;
         _onCoinCollectedEventListener = new();
         _onCoinCollectedEventListener.Add(CollectCoin);
+
+        OnValueChanged();
     }
     private void CollectCoin() => AddCoins(1);
     public void AddCoins(int value)
@@ -36,7 +38,7 @@ public class Wallet
             Debug.LogError("out of range ex in is enough func in wallet !!");
             return false;
         }
-        return coins >= _money;
+        return _money >= coins;
     }
     public void Spend(int coins)
     {

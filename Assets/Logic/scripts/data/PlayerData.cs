@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class PlayerData
 {
-    private ShopItem _selectedSkin;
+    private int _selectedSkin;
 
-    private List<ShopItem> _openedSkins;
+    private List<int> _openedSkins;
 
     private int _money;
     
     public PlayerData(PlayerDataConfig data) 
     {
         _money = data.Money;
-        _selectedSkin = data.SelectedSkin;
-        _openedSkins = new List<ShopItem> { _selectedSkin };
+        _selectedSkin = data.SelectedSkin.ItemId;
+        _openedSkins = new List<int> { _selectedSkin };
     }
     [JsonConstructor]
-    public PlayerData(int money, ShopItem selectedSkin, List<ShopItem> openedSkins)
+    public PlayerData(int money, int selectedSkin, List<int> openedSkins)
     {
         _money = money;
         _selectedSkin = selectedSkin;
-        _openedSkins = new List<ShopItem>(openedSkins);
+        _openedSkins = new List<int>(openedSkins);
     }
     #region fields
     public int Money
@@ -34,24 +34,35 @@ public class PlayerData
                 Debug.LogError($"value out of range : {value}");
                 return;
             }
-            _money = value;  
+            _money = value;
+            SaveAfterChanges();
         }
     }
-    public ShopItem SelectedSkin => _selectedSkin;
-    public IEnumerable<ShopItem> OpenedSkins => _openedSkins;
+    public int SelectedSkin => _selectedSkin;
+    public IEnumerable<int> OpenedSkins => _openedSkins;
     #endregion
 
     #region skin methods
-    public void OpenSkin(ShopItem skin)
+    public void OpenSkin(PlayerSkinItem skin)
     {
         if (IsSkinOpened(skin))
         {
             Debug.Log("this skin is already opend !!");
             return;
         }
-        _openedSkins.Add(skin);
+        _openedSkins.Add(skin.ItemId);
+        SaveAfterChanges();
     } 
-    public bool IsSkinOpened(ShopItem skin) => _openedSkins.Contains(skin);
-    public void SelectSkin(ShopItem skin) => _selectedSkin = skin;
+    public bool IsSkinOpened(PlayerSkinItem skin) => _openedSkins.Contains(skin.ItemId);
+    public bool IsSkinSelected(PlayerSkinItem skin) => skin.ItemId == _selectedSkin;
+    public void SelectSkin(PlayerSkinItem skin)
+    {
+        _selectedSkin = skin.ItemId;
+        SaveAfterChanges();
+    }
     #endregion
+    private void SaveAfterChanges()
+    {
+        EventBus<OnDataSave>.RaiseEvent(new OnDataSave());
+    }
 }

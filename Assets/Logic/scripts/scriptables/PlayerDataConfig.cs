@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerDataConfig : ScriptableObject
 {
     public int Money => _money;
-    public ShopItem SelectedSkin => _selectedSkin;
+    public PlayerSkinItem SelectedSkin => _selectedSkin;
 
     [SerializeField] private int _money;
-    [SerializeField] private ShopItem _selectedSkin;
+    [SerializeField] private PlayerSkinItem _selectedSkin;
 }
