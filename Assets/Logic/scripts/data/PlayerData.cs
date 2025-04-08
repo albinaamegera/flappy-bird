@@ -23,6 +23,7 @@ public class PlayerData
         _selectedSkin = selectedSkin;
         _openedSkins = new List<ShopItem>(openedSkins);
     }
+    #region fields
     public int Money
     {
         get => _money;
@@ -36,15 +37,21 @@ public class PlayerData
             _money = value;  
         }
     }
+    public ShopItem SelectedSkin => _selectedSkin;
     public IEnumerable<ShopItem> OpenedSkins => _openedSkins;
+    #endregion
 
+    #region skin methods
     public void OpenSkin(ShopItem skin)
     {
-        if (_openedSkins.Contains(skin))
+        if (IsSkinOpened(skin))
         {
             Debug.Log("this skin is already opend !!");
             return;
         }
         _openedSkins.Add(skin);
     } 
+    public bool IsSkinOpened(ShopItem skin) => _openedSkins.Contains(skin);
+    public void SelectSkin(ShopItem skin) => _selectedSkin = skin;
+    #endregion
 }

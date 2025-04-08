@@ -291,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6494247774662090600, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6494247774662090600, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -4041,7 +4041,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5728398803650931191, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6132423981188089496, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
       propertyPath: m_Name
@@ -7345,6 +7345,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1001387777}
     m_Modifications:
+    - target: {fileID: 5728398803650931191, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6132423981188089496, guid: 3717f420415d7c94c98c538d685e3f11, type: 3}
       propertyPath: m_Name
       value: nextBtn
