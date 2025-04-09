@@ -9,19 +9,23 @@ public class PlayerData
     private List<PlayerSkins> _openedSkins;
 
     private int _money;
+
+    private SettingsData _settings;
     
     public PlayerData(PlayerDataConfig data) 
     {
         _money = data.Money;
         _selectedSkin = data.SelectedSkin.Skin;
         _openedSkins = new List<PlayerSkins> { _selectedSkin };
+        _settings = new(data.MusicIsOn, data.SoundIsOn, data.LocaleId);
     }
     [JsonConstructor]
-    public PlayerData(int money, PlayerSkins selectedSkin, List<PlayerSkins> openedSkins)
+    public PlayerData(int money, PlayerSkins selectedSkin, List<PlayerSkins> openedSkins, SettingsData settings)
     {
         _money = money;
         _selectedSkin = selectedSkin;
         _openedSkins = new List<PlayerSkins>(openedSkins);
+        _settings = settings;
     }
     #region fields
     public int Money
@@ -40,6 +44,8 @@ public class PlayerData
     }
     public PlayerSkins SelectedSkin => _selectedSkin;
     public IEnumerable<PlayerSkins> OpenedSkins => _openedSkins;
+
+    public SettingsData Settings => _settings;
     #endregion
 
     #region skin methods

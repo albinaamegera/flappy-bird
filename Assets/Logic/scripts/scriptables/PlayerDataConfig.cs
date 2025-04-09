@@ -7,6 +7,16 @@ public class PlayerDataConfig : ScriptableObject
     public int Money => _money;
     public PlayerSkinItem SelectedSkin => _selectedSkin;
 
+    [Header("player data")]
     [SerializeField] private int _money;
     [SerializeField] private PlayerSkinItem _selectedSkin;
+
+    [Header("settings")]
+    [SerializeField] private bool _musicIsOn;
+    [SerializeField] private bool _soundIsOn;
+    [SerializeField] private int _localeId;
+
+    public bool MusicIsOn => _musicIsOn;
+    public bool SoundIsOn => _soundIsOn;
+    public int LocaleId => _localeId;
 }
