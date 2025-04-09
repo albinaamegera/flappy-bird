@@ -7,12 +7,12 @@ public class ShopItemChecker : IShopItemVisitor
     public void Visit(ShopItem item) => Visit((dynamic)item);
     public void Visit(PlayerSkinItem item)
     {
-        IsOpened = _persistentData.PlayerData.IsSkinOpened(item);
+        IsOpened = _persistentData.PlayerData.IsSkinOpened(item.Skin);
         if (!IsOpened)
         {
             IsSelected = false;
             return;
         }
-        IsSelected = _persistentData.PlayerData.IsSkinSelected(item);
+        IsSelected = _persistentData.PlayerData.IsSkinSelected(item.Skin);
     }
 }

@@ -29,6 +29,17 @@ public class ShopItemPanelViewController : MonoBehaviour
         _unlocker = unlocker;
         _wallet = wallet;
 
+        // check selected on start to update prefabs on level
+        foreach (var item in _currentContent.Items)
+        {
+            _checker.Visit(item);
+            if (_checker.IsSelected)
+            {
+                _selector.Visit(item);
+                break;
+            }
+        }
+
         GetShopItem(0);
     }
 

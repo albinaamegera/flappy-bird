@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f69392b74a878a4e80811192f5aadee, type: 3}
   m_Name: player data config
   m_EditorClassIdentifier: 
-  _money: 0
-  _skins: []
+  _money: 100
+  _selectedSkin: {fileID: 11400000, guid: 04e300a819805954c9f0e674e3d20881, type: 2}

@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class PlayerData
 {
-    private int _selectedSkin;
+    private PlayerSkins _selectedSkin;
 
-    private List<int> _openedSkins;
+    private List<PlayerSkins> _openedSkins;
 
     private int _money;
     
     public PlayerData(PlayerDataConfig data) 
     {
         _money = data.Money;
-        _selectedSkin = data.SelectedSkin.ItemId;
-        _openedSkins = new List<int> { _selectedSkin };
+        _selectedSkin = data.SelectedSkin.Skin;
+        _openedSkins = new List<PlayerSkins> { _selectedSkin };
     }
     [JsonConstructor]
-    public PlayerData(int money, int selectedSkin, List<int> openedSkins)
+    public PlayerData(int money, PlayerSkins selectedSkin, List<PlayerSkins> openedSkins)
     {
         _money = money;
         _selectedSkin = selectedSkin;
-        _openedSkins = new List<int>(openedSkins);
+        _openedSkins = new List<PlayerSkins>(openedSkins);
     }
     #region fields
     public int Money
@@ -35,30 +35,30 @@ public class PlayerData
                 return;
             }
             _money = value;
-            SaveAfterChanges();
+            //SaveAfterChanges();
         }
     }
-    public int SelectedSkin => _selectedSkin;
-    public IEnumerable<int> OpenedSkins => _openedSkins;
+    public PlayerSkins SelectedSkin => _selectedSkin;
+    public IEnumerable<PlayerSkins> OpenedSkins => _openedSkins;
     #endregion
 
     #region skin methods
-    public void OpenSkin(PlayerSkinItem skin)
+    public void OpenSkin(PlayerSkins skin)
     {
         if (IsSkinOpened(skin))
         {
             Debug.Log("this skin is already opend !!");
             return;
         }
-        _openedSkins.Add(skin.ItemId);
-        SaveAfterChanges();
+        _openedSkins.Add(skin);
+        //SaveAfterChanges();
     } 
-    public bool IsSkinOpened(PlayerSkinItem skin) => _openedSkins.Contains(skin.ItemId);
-    public bool IsSkinSelected(PlayerSkinItem skin) => skin.ItemId == _selectedSkin;
-    public void SelectSkin(PlayerSkinItem skin)
+    public bool IsSkinOpened(PlayerSkins skin) => _openedSkins.Contains(skin);
+    public bool IsSkinSelected(PlayerSkins skin) => skin == _selectedSkin;
+    public void SelectSkin(PlayerSkins skin)
     {
-        _selectedSkin = skin.ItemId;
-        SaveAfterChanges();
+        _selectedSkin = skin;
+        //SaveAfterChanges();
     }
     #endregion
     private void SaveAfterChanges()

@@ -12,6 +12,10 @@ public struct OnPlayerTransform : IEvent
 {
     public Transform transform;
 }
+public struct OnPlayerSkinChanged : IEvent
+{
+    public Sprite Sprite { get; set; }
+}
 public struct OnCoinCollected : IEvent { }
 public struct OnCoinValueChanged : IEvent
 {

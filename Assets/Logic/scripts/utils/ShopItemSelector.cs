@@ -5,5 +5,9 @@ public class ShopItemSelector : IShopItemVisitor
 
     public void Visit(ShopItem item) => Visit((dynamic)item);
 
-    public void Visit(PlayerSkinItem item) => _persistentData.PlayerData.SelectSkin(item);
+    public void Visit(PlayerSkinItem item)
+    {
+        _persistentData.PlayerData.SelectSkin(item.Skin);
+        EventBus<OnPlayerSkinChanged>.RaiseEvent(new OnPlayerSkinChanged() { Sprite = item.Sprite });
+    }
 }

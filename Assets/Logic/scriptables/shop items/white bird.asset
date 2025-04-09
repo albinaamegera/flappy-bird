@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sprite: {fileID: 6585124905913533040, guid: d3e71791e19f4904a9006cb489d940f1, type: 3}
   _cost: 50
+  _skin: 4
