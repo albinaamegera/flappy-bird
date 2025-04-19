@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerViewController : ViewController
 {
+    [SerializeField] private CoinViewController _coinView;
     [Header("shop item panels")]
     [SerializeField] private ShopItemPanelViewController[] _controllers;
 
@@ -15,17 +16,18 @@ public class PlayerViewController : ViewController
     private void Awake()
     {
         _onDataInitializedEventListener.Add(e => InitializeControllers(
-            e.persistentData,
-            e.wallet
+            e.persistentData
         ));
     }
-    private void InitializeControllers(IPersistentData persistentData, Wallet wallet)
+    private void InitializeControllers(IPersistentData persistentData)
     {
         _checker = new(persistentData);
         _selector = new(persistentData);
         _unlocker = new(persistentData);
 
         foreach (var controller in _controllers)
-            controller.Initialize(_checker, _selector, _unlocker, wallet);
+            controller.Initialize(_checker, _selector, _unlocker, persistentData.PlayerData.Wallet);
+
+        _coinView.Initialize(persistentData.PlayerData.Wallet);
     }
 }

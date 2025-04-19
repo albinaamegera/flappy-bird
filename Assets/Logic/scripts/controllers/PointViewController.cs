@@ -10,31 +10,26 @@ public class PointViewController : MonoBehaviour
     [Header("callbacks")]
     [SerializeField] private UnityEvent _onViewUpdated;
 
-    private int _counter = 0;
+    private ScoreCounter _counter;
 
-    private EventListener<OnPointCollected> _onPointCollectedEventListener = new();
-    private EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
-    private EventListener<OnLevelExitEvent> _onlevelExitEventListener = new();
-
-    private void Awake()
+    private void OnEnable ()
     {
-        _onPointCollectedEventListener.Add(UpdateCounter);
-        _onLevelRestartedEventListener.Add(ResetCounter);
-        _onlevelExitEventListener.Add(ResetCounter);
+        if (_counter == null)
+            return;
+        _counter.OnScoreChanged += UpdateView;
     }
-    private void ResetCounter()
+    public void Initialize(ScoreCounter counter)
     {
-        _counter = 0;
-        UpdateView();
+        _counter = counter;
+        _counter.OnScoreChanged += UpdateView;
     }
-    private void UpdateCounter()
+    private void UpdateView(int value)
     {
-        _counter++;
-        UpdateView();
-    }
-    private void UpdateView()
-    {
-        _text.text = _counter.ToString();
+        _text.text = value.ToString();
         _onViewUpdated.Invoke();
+    }
+    private void OnDisable()
+    {
+        _counter.OnScoreChanged -= UpdateView;
     }
 }

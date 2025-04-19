@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerDataConfig : ScriptableObject
 {
     public int Money => _money;
+    public int Record => _record;
     public PlayerSkinItem SelectedSkin => _selectedSkin;
 
     [Header("player data")]
     [SerializeField] private int _money;
+    [SerializeField] private int _record;
     [SerializeField] private PlayerSkinItem _selectedSkin;
 
     [Header("settings")]

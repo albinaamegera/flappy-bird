@@ -1,35 +1,35 @@
+using Newtonsoft.Json;
+using System;
 using UnityEngine;
 
 public class Wallet
 {
-    private IPersistentData _persistentData;
+    public Action<int> OnCoinsChanged;
+
     private int _money;
 
     private EventListener<OnCoinCollected> _onCoinCollectedEventListener;
 
-    public Wallet(IPersistentData persistentData)
+    [JsonConstructor]
+    public Wallet(int money)
     {
-        _persistentData = persistentData;
-        _money = _persistentData.PlayerData.Money;
-        _onCoinCollectedEventListener = new();
-        _onCoinCollectedEventListener.Add(CollectCoin);
+        _money = money;
 
-        OnValueChanged();
+        InitListeners();
     }
+    public int Money => _money;
     private void CollectCoin() => AddCoins(1);
-    public void AddCoins(int value)
+    private void AddCoins(int value)
     {
         if (value < 0)
         {
             Debug.LogError("out of range exeption in add coins func in wallet !!");
             return;
         }
-        _persistentData.PlayerData.Money += value;
-        _money = _persistentData.PlayerData.Money;
+        _money += value;
 
         OnValueChanged();
     }
-    public int GetCurrentCoins() => _money;
 
     public bool IsEnough(int coins)
     {
@@ -48,10 +48,14 @@ public class Wallet
             return;
         }
 
-        _persistentData.PlayerData.Money -= coins;
-        _money = _persistentData.PlayerData.Money;
+        _money -= coins;
 
         OnValueChanged();
     }
-    private void OnValueChanged() => EventBus<OnCoinValueChanged>.RaiseEvent(new OnCoinValueChanged() { value = _money });
+    private void OnValueChanged() => OnCoinsChanged?.Invoke(_money);
+    private void InitListeners()
+    {
+        _onCoinCollectedEventListener = new();
+        _onCoinCollectedEventListener.Add(CollectCoin);
+    }
 }

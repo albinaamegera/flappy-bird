@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _money: 100
   _selectedSkin: {fileID: 11400000, guid: 04e300a819805954c9f0e674e3d20881, type: 2}
+  _musicIsOn: 1
+  _soundIsOn: 1
+  _localeId: 0

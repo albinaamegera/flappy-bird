@@ -17,10 +17,7 @@ public struct OnPlayerSkinChanged : IEvent
     public Sprite Sprite { get; set; }
 }
 public struct OnCoinCollected : IEvent { }
-public struct OnCoinValueChanged : IEvent
-{
-    public int value { get; set; }
-}
+
 public struct OnPointCollected : IEvent { }
 public struct OnSoundEffectTriggered : IEvent
 {
@@ -42,6 +39,5 @@ public struct OnLocaleChanged : IEvent { }
 public struct OnDataInitialized : IEvent
 {
     public IPersistentData persistentData;
-    public Wallet wallet;
 }
 public struct OnDataSave : IEvent { }

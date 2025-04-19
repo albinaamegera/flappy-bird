@@ -7,8 +7,6 @@ public class PlayerDataManager : MonoBehaviour
     private IPersistentData _persistentData;
     private IDataProvider _localProvider;
 
-    private Wallet _wallet;
-
     private EventListener<OnDataSave> _onDataSaveEventListener = new();
 
     private void Start()
@@ -16,8 +14,6 @@ public class PlayerDataManager : MonoBehaviour
         _onDataSaveEventListener.Add(SaveData);
 
         InitializeData();
-
-        InitializeWallet();
 
         SendInitializedData();
     }
@@ -28,16 +24,11 @@ public class PlayerDataManager : MonoBehaviour
 
         LoadDataOrInit();
     }
-    private void InitializeWallet()
-    {
-        _wallet = new Wallet(_persistentData);
-    }
     private void SendInitializedData()
     {
         EventBus<OnDataInitialized>.RaiseEvent(new OnDataInitialized()
         {
-            persistentData = _persistentData,
-            wallet = _wallet
+            persistentData = _persistentData
         });
     }
     private void LoadDataOrInit()

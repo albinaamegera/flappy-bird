@@ -6382,6 +6382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseController: {fileID: 324275052}
+  _coinController: {fileID: 5657044110320946948}
+  _pointController: {fileID: 2131441292}
 --- !u!1 &1518295448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8580,6 +8582,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8872665f806118947a8301e17f750dda, type: 3}
+--- !u!114 &5657044110320946948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7118607053526216292, guid: 8872665f806118947a8301e17f750dda, type: 3}
+  m_PrefabInstance: {fileID: 5657044110320946947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9eb935e5c4d6ae44a7d542bb7964be0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

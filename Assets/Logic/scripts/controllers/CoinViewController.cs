@@ -10,17 +10,27 @@ public class CoinViewController : MonoBehaviour
     [Header("callbacks")]
     [SerializeField] private UnityEvent _onViewUpdate;
 
-    // listeners
-    private EventListener<OnCoinValueChanged> _onCoinValueChangedEventListener = new();
-    // todo : on ubdate coins listener to show current value
-
-    private void Awake()
+    private Wallet _wallet;
+    public void Initialize(Wallet wallet)
     {
-        _onCoinValueChangedEventListener.Add(e => UpdateView(e.value));
+        _wallet = wallet;
+        _wallet.OnCoinsChanged += UpdateView;
     }
     private void UpdateView(int value)
     {
         _text.text = value.ToString();
         _onViewUpdate.Invoke();
+    }
+    private void OnEnable()
+    {
+        if (_wallet == null)
+        {
+            return;
+        }
+        _wallet.OnCoinsChanged += UpdateView;
+    }
+    private void OnDisable()
+    {
+        _wallet.OnCoinsChanged -= UpdateView;
     }
 }
