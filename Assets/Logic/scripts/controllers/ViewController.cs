@@ -18,6 +18,8 @@ public abstract class ViewController : MonoBehaviour, IViewController
             _current.interactable = false;
         _current.blocksRaycasts = false;
         _onHide.Invoke();
+
+        gameObject.SetActive(false);
     }
     public virtual void Show()
     {
@@ -27,5 +29,7 @@ public abstract class ViewController : MonoBehaviour, IViewController
             _current.interactable = true;
         _current.blocksRaycasts = true;
         _onShow.Invoke();
+
+        gameObject.SetActive(true);
     }
 }

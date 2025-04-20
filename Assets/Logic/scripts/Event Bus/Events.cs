@@ -23,10 +23,6 @@ public struct OnSoundEffectTriggered : IEvent
 {
     public AudioClip clip;
 }
-public struct OnTubButtonPressed : IEvent
-{
-    public int id;
-}
 public struct OnMusicToggleValueChanged : IEvent
 {
     public bool value;
@@ -36,8 +32,4 @@ public struct OnEffectsToggleValueChanged : IEvent
     public bool value;
 }
 public struct OnLocaleChanged : IEvent { }
-public struct OnDataInitialized : IEvent
-{
-    public IPersistentData persistentData;
-}
 public struct OnDataSave : IEvent { }

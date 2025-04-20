@@ -15,22 +15,11 @@ public class CoinViewController : MonoBehaviour
     {
         _wallet = wallet;
         _wallet.OnCoinsChanged += UpdateView;
+        UpdateView(_wallet.Money);
     }
     private void UpdateView(int value)
     {
         _text.text = value.ToString();
         _onViewUpdate.Invoke();
-    }
-    private void OnEnable()
-    {
-        if (_wallet == null)
-        {
-            return;
-        }
-        _wallet.OnCoinsChanged += UpdateView;
-    }
-    private void OnDisable()
-    {
-        _wallet.OnCoinsChanged -= UpdateView;
     }
 }

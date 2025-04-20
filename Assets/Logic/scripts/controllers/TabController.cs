@@ -1,9 +1,8 @@
+using System;
 using UnityEngine;
 
 public class TabController : MonoBehaviour
 {
-    public void SendTabId(int id)
-    {
-        EventBus<OnTubButtonPressed>.RaiseEvent(new OnTubButtonPressed() { id = id });
-    }
+    public Action<int> OnTabChanged;
+    public void SendTabId(int id) => OnTabChanged?.Invoke(id);
 }

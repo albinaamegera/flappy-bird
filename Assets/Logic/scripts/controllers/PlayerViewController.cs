@@ -10,24 +10,22 @@ public class PlayerViewController : ViewController
     private ShopItemSelector _selector;
     private ShopItemUnlocker _unlocker;
 
-    // event listeners
-    private EventListener<OnDataInitialized> _onDataInitializedEventListener = new();
+    private IPersistentData _persistentData;
+    public void InitializeData(IPersistentData persistentData)
+    {
+        _persistentData = persistentData;
 
-    private void Awake()
-    {
-        _onDataInitializedEventListener.Add(e => InitializeControllers(
-            e.persistentData
-        ));
+        InitializeControllers();
     }
-    private void InitializeControllers(IPersistentData persistentData)
+    private void InitializeControllers()
     {
-        _checker = new(persistentData);
-        _selector = new(persistentData);
-        _unlocker = new(persistentData);
+        _checker = new(_persistentData);
+        _selector = new(_persistentData);
+        _unlocker = new(_persistentData);
 
         foreach (var controller in _controllers)
-            controller.Initialize(_checker, _selector, _unlocker, persistentData.PlayerData.Wallet);
+            controller.Initialize(_checker, _selector, _unlocker, _persistentData.PlayerData.Wallet);
 
-        _coinView.Initialize(persistentData.PlayerData.Wallet);
+        _coinView.Initialize(_persistentData.PlayerData.Wallet);
     }
 }

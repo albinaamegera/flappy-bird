@@ -1,8 +1,11 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseViewAnimator : MonoBehaviour
 {
+    public UnityEvent OnShowComplete;
+
     [Header("animation settings")]
     [SerializeField] private RectTransform _targetTransform;
     [SerializeField] private CanvasGroup _targetRenderer;
@@ -31,6 +34,8 @@ public class PauseViewAnimator : MonoBehaviour
             .From(0)
             .SetEase(Ease.InSine)
             .SetDelay(_delay);
+
+        _renderTween.onComplete += delegate { OnShowComplete?.Invoke(); };
     }
     public void AnimateHide()
     {

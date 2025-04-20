@@ -12,12 +12,6 @@ public class PointViewController : MonoBehaviour
 
     private ScoreCounter _counter;
 
-    private void OnEnable ()
-    {
-        if (_counter == null)
-            return;
-        _counter.OnScoreChanged += UpdateView;
-    }
     public void Initialize(ScoreCounter counter)
     {
         _counter = counter;
@@ -25,11 +19,8 @@ public class PointViewController : MonoBehaviour
     }
     private void UpdateView(int value)
     {
+        Debug.Log($"point view updated {value}");
         _text.text = value.ToString();
         _onViewUpdated.Invoke();
-    }
-    private void OnDisable()
-    {
-        _counter.OnScoreChanged -= UpdateView;
     }
 }

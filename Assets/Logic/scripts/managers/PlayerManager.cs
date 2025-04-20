@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour
     private EventListener<OnPlayerCollision> _onPlayerCollisionEventListener = new();
     private EventListener<OnPlayerSkinChanged> _onPlayerSkinChangedEventListener = new();
 
-    private void Start()
+    private void Awake()
     {
         _onLevelStartedEventListener.Add(InstantiatePlayer);
         _onLevelRestartedEventListener.Add(ResetPlayer);

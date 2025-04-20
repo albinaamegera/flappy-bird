@@ -9,17 +9,13 @@ public class OptionsViewController : ViewController
     [SerializeField] private Button _languageSwitcherBtn;
 
     private IPersistentData _persistentData;
-
-    private EventListener<OnDataInitialized> _onDataInitializedEventListener = new();
-
     private void Awake()
     {
         _musicToggle.onValueChanged.AddListener(ToggleMusic);
         _effectsToggle.onValueChanged.AddListener(ToggleEffects);
         _languageSwitcherBtn.onClick.AddListener(SwitchLanguage);
-        _onDataInitializedEventListener.Add(e => Initialize(e.persistentData));
     }
-    private void Initialize(IPersistentData persistentData)
+    public void InitializeData(IPersistentData persistentData)
     {
         _persistentData = persistentData;
         _musicToggle.isOn = _persistentData.PlayerData.Settings.MusicIsOn;

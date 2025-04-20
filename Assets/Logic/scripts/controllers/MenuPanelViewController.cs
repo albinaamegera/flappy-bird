@@ -5,15 +5,13 @@ using UnityEngine;
 public class MenuPanelViewController : PanelViewController
 {
     [SerializeField] private ViewController[] _controllers;
+    [SerializeField] private TabController _controller;
 
     int _currentControllerId = 0;
 
-    // event listeners
-    private EventListener<OnTubButtonPressed> _onTabButtonPressedEventListener = new();
-
-    private void Awake()
+    private void OnEnable()
     {
-        _onTabButtonPressedEventListener.Add(e => SwitchController(e.id));
+        _controller.OnTabChanged += SwitchController;
     }
     private void Start()
     {
@@ -30,6 +28,10 @@ public class MenuPanelViewController : PanelViewController
         {
             Debug.LogError(duplicate.ToString());
         }
+    }
+    private void OnDisable()
+    {
+        _controller.OnTabChanged -= SwitchController;
     }
     public override void Show()
     {

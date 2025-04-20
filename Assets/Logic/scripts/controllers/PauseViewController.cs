@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ public class PauseViewController : ViewController
     [Header("ui references")]
     [SerializeField] private Button _restartBtn;
     [SerializeField] private Button _goToMenuBtn;
+    [SerializeField] private TMP_Text _newRecordMes;
 
 
     private void Awake()
@@ -22,14 +24,20 @@ public class PauseViewController : ViewController
     {
         EventBus<OnLevelExitEvent>.RaiseEvent(new OnLevelExitEvent());
     }
-
     public override void Show()
     {
         base.Show();
     }
+    public void Show(bool isRecord)
+    {
+        if (isRecord)
+            _newRecordMes.gameObject.SetActive(true);
+        Show();
+    }
 
     public override void Hide()
     {
+        _newRecordMes.gameObject.SetActive(false);
         base.Hide();
     }
 }

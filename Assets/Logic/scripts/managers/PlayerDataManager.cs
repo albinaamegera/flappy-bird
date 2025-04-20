@@ -4,18 +4,25 @@ public class PlayerDataManager : MonoBehaviour
 {
     [SerializeField] private PlayerDataConfig _playerConfig;
 
+    // components to initialize
+    [Header("components to init")]
+    [SerializeField] private LevelPanelViewController _levelPanel;
+    [SerializeField] private PlayerViewController _playerView;
+    [SerializeField] private OptionsViewController _optionsView;
+    [SerializeField] private LanguageSwitcher _switcher;
+
     private IPersistentData _persistentData;
     private IDataProvider _localProvider;
 
     private EventListener<OnDataSave> _onDataSaveEventListener = new();
 
-    private void Start()
+    private void Awake()
     {
         _onDataSaveEventListener.Add(SaveData);
 
         InitializeData();
 
-        SendInitializedData();
+        InitializeControllers();
     }
     private void InitializeData()
     {
@@ -24,12 +31,12 @@ public class PlayerDataManager : MonoBehaviour
 
         LoadDataOrInit();
     }
-    private void SendInitializedData()
+    private void InitializeControllers()
     {
-        EventBus<OnDataInitialized>.RaiseEvent(new OnDataInitialized()
-        {
-            persistentData = _persistentData
-        });
+        _levelPanel.Initialize(_persistentData);
+        _playerView.InitializeData(_persistentData);
+        _optionsView.InitializeData(_persistentData);
+        _switcher.InitializeData(_persistentData);
     }
     private void LoadDataOrInit()
     {

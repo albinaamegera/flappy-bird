@@ -10,24 +10,17 @@ public class LanguageSwitcher : MonoBehaviour
     private IPersistentData _persistentData;
     // event listeners
     private EventListener<OnLocaleChanged> _onLocaleChangedEventListeners = new();
-    private EventListener<OnDataInitialized> _onDataInitializedEventListener = new();
 
     private void Awake()
     {
         _onLocaleChangedEventListeners.Add(ChangeLocale);
-        _onDataInitializedEventListener.Add(e => Initialize(e.persistentData));
     }
-    private IEnumerator Start()
-    {
-        yield return LocalizationSettings.InitializationOperation;
-
-        _localesCount = LocalizationSettings.AvailableLocales.Locales.Count;
-    }
-    private void Initialize(IPersistentData persistentData)
+    
+    public void InitializeData(IPersistentData persistentData)
     {
         _persistentData = persistentData;
-        _currentLocaleIndex = _persistentData.PlayerData.Settings.CurrentLocaleId;
-        ChangeLocale(_currentLocaleIndex);
+
+        StartCoroutine(SetLocale());
     }
     public void ChangeLocale()
     {
@@ -45,5 +38,13 @@ public class LanguageSwitcher : MonoBehaviour
     private void ChangeLocale(int index)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+    }
+    private IEnumerator SetLocale()
+    {
+        yield return LocalizationSettings.InitializationOperation;
+
+        _localesCount = LocalizationSettings.AvailableLocales.Locales.Count;
+        _currentLocaleIndex = _persistentData.PlayerData.Settings.CurrentLocaleId;
+        ChangeLocale(_currentLocaleIndex);
     }
 }
