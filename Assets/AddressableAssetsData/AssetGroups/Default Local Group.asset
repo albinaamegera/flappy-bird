@@ -15,11 +15,6 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: adc11e87258a3ea46a54c1be77e14817
   m_SerializeEntries:
-  - m_GUID: 2c3e20cbc89153f4e9ef19c6552943fa
-    m_Address: Assets/Resourses/sprite atlaces/GameSprites.spriteatlasv2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31223e9da8a4372499dadd99c49ca90f
     m_Address: Assets/Resourses/prefabs/backgroundPart.prefab
     m_ReadOnly: 0
@@ -50,18 +45,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da5c7a399c9f37748b6f9a43784787a4
-    m_Address: Assets/Resourses/sprite atlaces/PlayerSprites.spriteatlasv2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: efa195c89ea3cd04f84cce3db616fed2
     m_Address: Assets/Resourses/localization/Localization Settings.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fbc4910c90fa8bb4b8536bde302f45f6
-    m_Address: Assets/Resourses/sprite atlaces/UI&Icons.spriteatlasv2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
