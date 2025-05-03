@@ -148,29 +148,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PipeStyle1_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 80
-        width: 32
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 732a9bc926e640140a4c57b4b51a38ff
-      internalID: 245349226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PipeStyle1_2
+      name: evening
       rect:
         serializedVersion: 2
         x: 64
@@ -179,7 +157,7 @@ TextureImporter:
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 23, z: 0, w: 25}
       customData: 
       outline: []
       physicsShape: []
@@ -192,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PipeStyle1_3
+      name: night
       rect:
         serializedVersion: 2
         x: 96
@@ -201,7 +179,7 @@ TextureImporter:
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 23, z: 0, w: 25}
       customData: 
       outline: []
       physicsShape: []
@@ -214,29 +192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PipeStyle1_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a5c3ddaf35dda645836d450303933c1
-      internalID: 1050922871
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PipeStyle1_5
+      name: star_night
       rect:
         serializedVersion: 2
         x: 32
@@ -245,7 +201,7 @@ TextureImporter:
         height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 23, z: 0, w: 25}
       customData: 
       outline: []
       physicsShape: []
@@ -253,50 +209,6 @@ TextureImporter:
       bones: []
       spriteID: d16e37d446ad44d4197e5e139ff08a60
       internalID: -1424595919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PipeStyle1_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df50c644dfd30ff46a089a7a29beb2ac
-      internalID: -660694312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PipeStyle1_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4508d47c5de2fa34eb11ea4b1863f687
-      internalID: -1182927866
       vertices: []
       indices: 
       edges: []
@@ -315,14 +227,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PipeStyle1_1: 245349226
-      PipeStyle1_2: 19117856
-      PipeStyle1_3: -1217511045
       PipeStyle1_4: 1050922871
-      PipeStyle1_5: -1424595919
       PipeStyle1_6: -660694312
       PipeStyle1_7: -1182927866
       default: -1969497438595790671
+      evening: 19117856
+      night: -1217511045
+      star_night: -1424595919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

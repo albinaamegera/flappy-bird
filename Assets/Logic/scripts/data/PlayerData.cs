@@ -6,25 +6,32 @@ using UnityEngine;
 public class PlayerData
 {
     private PlayerSkins _selectedSkin;
+    private PlayerThemes _selectedTheme;
 
     private List<PlayerSkins> _openedSkins;
+    private List<PlayerThemes> _openedThemes;
     private SettingsData _settings;
     private ScoreCounter _counter;
     private Wallet _wallet;
     
     public PlayerData(PlayerDataConfig data) 
     {
-        _selectedSkin = data.SelectedSkin.Skin;
+        _selectedSkin = data.SelectedSkin;
+        _selectedTheme = data.SelectedTheme;
         _openedSkins = new List<PlayerSkins> { _selectedSkin };
+        _openedThemes = new List<PlayerThemes> { _selectedTheme };
         _settings = new(data.MusicIsOn, data.SoundIsOn, data.LocaleId);
         _wallet = new(data.Money);
         _counter = new(DateTime.Now, data.Record);
     }
     [JsonConstructor]
-    public PlayerData(PlayerSkins selectedSkin, List<PlayerSkins> openedSkins, SettingsData settings, ScoreCounter counter, Wallet wallet)
+    public PlayerData(PlayerSkins selectedSkin, PlayerThemes selectedTheme,
+        List<PlayerSkins> openedSkins, List<PlayerThemes> openedThemes, SettingsData settings, ScoreCounter counter, Wallet wallet)
     {
         _selectedSkin = selectedSkin;
+        _selectedTheme = selectedTheme;
         _openedSkins = new List<PlayerSkins>(openedSkins);
+        _openedThemes = new List<PlayerThemes>(openedThemes);
         _settings = settings;
         _counter = counter;
         _wallet = wallet;
@@ -32,7 +39,9 @@ public class PlayerData
     #region fields
     
     public PlayerSkins SelectedSkin => _selectedSkin;
+    public PlayerThemes SelectedTheme => _selectedTheme;
     public IEnumerable<PlayerSkins> OpenedSkins => _openedSkins;
+    public IEnumerable<PlayerThemes> OpenedThemes => _openedThemes;
 
     public SettingsData Settings => _settings;
     public ScoreCounter ScoreCounter => _counter;

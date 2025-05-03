@@ -371,7 +371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileStyle1_11
+      name: TileStyle1_night_1_1
       rect:
         serializedVersion: 2
         x: 224
@@ -2394,7 +2394,6 @@ TextureImporter:
       TileStyle1_10: 1512663998
       TileStyle1_100: 914017015
       TileStyle1_101: -1914461014
-      TileStyle1_11: -1075133223
       TileStyle1_12: 986587416
       TileStyle1_13: -923205193
       TileStyle1_14: -246672905
@@ -2488,6 +2487,7 @@ TextureImporter:
       TileStyle1_97: -1434044824
       TileStyle1_98: -759728533
       TileStyle1_99: 1046293874
+      TileStyle1_night_1_1: -1075133223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

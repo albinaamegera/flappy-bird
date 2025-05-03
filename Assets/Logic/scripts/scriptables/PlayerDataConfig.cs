@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "scriptables/player config", fileName = "new config")]
@@ -6,12 +5,14 @@ public class PlayerDataConfig : ScriptableObject
 {
     public int Money => _money;
     public int Record => _record;
-    public PlayerSkinItem SelectedSkin => _selectedSkin;
+    public PlayerSkins SelectedSkin => _selectedSkin;
+    public PlayerThemes SelectedTheme => _selectedTheme;
 
     [Header("player data")]
     [SerializeField] private int _money;
     [SerializeField] private int _record;
-    [SerializeField] private PlayerSkinItem _selectedSkin;
+    [SerializeField] private PlayerSkins _selectedSkin;
+    [SerializeField] private PlayerThemes _selectedTheme; 
 
     [Header("settings")]
     [SerializeField] private bool _musicIsOn;
