@@ -6,4 +6,5 @@ public class ShopItemUnlocker : IShopItemVisitor
     public ShopItemUnlocker(IPersistentData persistentData) => _persistentData = persistentData;
     public void Visit(ShopItem item) => Visit((dynamic)item);
     public void Visit(PlayerSkinItem item) => _persistentData.PlayerData.OpenSkin(item.Skin);
+    public void Visit(PlayerThemeItem item) => _persistentData.PlayerData.OpenTheme(item.Theme);
 }

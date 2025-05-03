@@ -15,4 +15,14 @@ public class ShopItemChecker : IShopItemVisitor
         }
         IsSelected = _persistentData.PlayerData.IsSkinSelected(item.Skin);
     }
+    public void Visit(PlayerThemeItem item)
+    {
+        IsOpened = _persistentData.PlayerData.IsThemeOpened(item.Theme);
+        if (!IsOpened)
+        {
+            IsSelected = false;
+            return;
+        }
+        IsSelected = _persistentData.PlayerData.IsThemeSelected(item.Theme);
+    }
 }

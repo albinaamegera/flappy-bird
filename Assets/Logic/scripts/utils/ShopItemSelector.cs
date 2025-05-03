@@ -10,4 +10,9 @@ public class ShopItemSelector : IShopItemVisitor
         _persistentData.PlayerData.SelectSkin(item.Skin);
         EventBus<OnPlayerSkinChanged>.RaiseEvent(new OnPlayerSkinChanged() { Sprite = item.Sprite });
     }
+    public void Visit(PlayerThemeItem item)
+    {
+        _persistentData.PlayerData.SelectTheme(item.Theme);
+        // invoke event
+    }
 }

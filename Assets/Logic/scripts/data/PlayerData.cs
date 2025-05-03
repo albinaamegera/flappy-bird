@@ -67,6 +67,25 @@ public class PlayerData
         //SaveAfterChanges();
     }
     #endregion
+    #region theme methods
+    public void OpenTheme(PlayerThemes theme)
+    {
+        if (IsThemeOpened(theme))
+        {
+            Debug.Log("this theme is already opened !!");
+            return;
+        }
+        _openedThemes.Add(theme);
+        //SaveAfterChanges();
+    }
+    public bool IsThemeOpened(PlayerThemes theme) => _openedThemes.Contains(theme);
+    public bool IsThemeSelected(PlayerThemes theme) => theme == _selectedTheme;
+    public void SelectTheme(PlayerThemes theme)
+    {
+        _selectedTheme = theme;
+        //SaveAfterChanges();
+    }
+    #endregion
     private void SaveAfterChanges()
     {
         EventBus<OnDataSave>.RaiseEvent(new OnDataSave());
