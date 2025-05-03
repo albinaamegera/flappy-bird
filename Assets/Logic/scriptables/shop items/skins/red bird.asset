@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e93a02a915c7fe46a0d69d8ba3fd85d, type: 3}
   m_Name: red bird
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 811993791851207881, guid: d3e71791e19f4904a9006cb489d940f1, type: 3}
+  _sprite: {fileID: -1403317885, guid: 947819c0f5fcd704594ecffb72fc9eac, type: 3}
   _cost: 40
   _skin: 1

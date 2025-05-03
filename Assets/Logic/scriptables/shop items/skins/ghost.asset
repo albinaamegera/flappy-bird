@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f69392b74a878a4e80811192f5aadee, type: 3}
-  m_Name: player data config
+  m_Script: {fileID: 11500000, guid: 0e93a02a915c7fe46a0d69d8ba3fd85d, type: 3}
+  m_Name: ghost
   m_EditorClassIdentifier: 
-  _money: 100
-  _record: 0
-  _selectedSkin: {fileID: 11400000, guid: 2061f386cc66756468fc78228cc4bb16, type: 2}
-  _musicIsOn: 0
-  _soundIsOn: 0
-  _localeId: 0
+  _sprite: {fileID: 571180223, guid: 947819c0f5fcd704594ecffb72fc9eac, type: 3}
+  _cost: 0
+  _skin: 14

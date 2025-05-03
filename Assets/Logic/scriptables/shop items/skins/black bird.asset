@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e93a02a915c7fe46a0d69d8ba3fd85d, type: 3}
-  m_Name: white bird
+  m_Name: black bird
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 6585124905913533040, guid: d3e71791e19f4904a9006cb489d940f1, type: 3}
-  _cost: 50
-  _skin: 4
+  _sprite: {fileID: -399283126, guid: 947819c0f5fcd704594ecffb72fc9eac, type: 3}
+  _cost: 0
+  _skin: 6

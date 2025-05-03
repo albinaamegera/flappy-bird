@@ -144,12 +144,12 @@ TextureImporter:
       name: robo
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 160
-        height: 160
+        x: 1
+        y: 481
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: fish
       rect:
         serializedVersion: 2
-        x: 160
-        y: 480
-        width: 160
-        height: 160
+        x: 161
+        y: 481
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: cosmo
       rect:
         serializedVersion: 2
-        x: 320
-        y: 480
-        width: 160
-        height: 160
+        x: 321
+        y: 481
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: dragon
       rect:
         serializedVersion: 2
-        x: 480
-        y: 480
-        width: 160
-        height: 160
+        x: 481
+        y: 481
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +232,12 @@ TextureImporter:
       name: bateye
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
-        width: 160
-        height: 160
+        x: 1
+        y: 321
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: dino
       rect:
         serializedVersion: 2
-        x: 160
-        y: 320
-        width: 160
-        height: 160
+        x: 161
+        y: 321
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: ghost
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
-        width: 160
-        height: 160
+        x: 321
+        y: 321
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +298,12 @@ TextureImporter:
       name: scull
       rect:
         serializedVersion: 2
-        x: 480
-        y: 320
-        width: 160
-        height: 160
+        x: 481
+        y: 321
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: default_bird
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 160
-        height: 160
+        x: 1
+        y: 161
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +342,12 @@ TextureImporter:
       name: blue_bird
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
-        width: 160
-        height: 160
+        x: 161
+        y: 161
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +364,12 @@ TextureImporter:
       name: red_bird
       rect:
         serializedVersion: 2
-        x: 320
-        y: 160
-        width: 160
-        height: 160
+        x: 321
+        y: 161
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,12 +386,12 @@ TextureImporter:
       name: green_bird
       rect:
         serializedVersion: 2
-        x: 480
-        y: 160
-        width: 160
-        height: 160
+        x: 481
+        y: 161
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,12 +408,12 @@ TextureImporter:
       name: diamond_bird
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 160
+        x: 1
+        y: 1
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -430,12 +430,12 @@ TextureImporter:
       name: white_bird
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 160
+        x: 161
+        y: 1
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -452,12 +452,12 @@ TextureImporter:
       name: pirple_bird
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 160
-        height: 160
+        x: 321
+        y: 1
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -474,12 +474,12 @@ TextureImporter:
       name: black_bird
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 160
-        height: 160
+        x: 481
+        y: 1
+        width: 158
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

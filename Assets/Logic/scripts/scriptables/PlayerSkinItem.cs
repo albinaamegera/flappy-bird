@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName ="scriptables/shop item", fileName = "new item")]
+[CreateAssetMenu(menuName ="scriptables/shop skin item", fileName = "new item")]
 public class PlayerSkinItem : ShopItem
 {
     public PlayerSkins Skin => _skin;
@@ -14,5 +14,15 @@ public enum PlayerSkins
     BlueBird,
     GreenBird,
     WhiteBird,
-    PirpleBird
+    PirpleBird,
+    BlackBird,
+    DiamondBird,
+    Robo,
+    Fish,
+    Cosmo,
+    Dragon,
+    BatEye,
+    Dino,
+    Ghost,
+    Scull
 }
