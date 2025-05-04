@@ -16,6 +16,10 @@ public struct OnPlayerSkinChanged : IEvent
 {
     public Sprite Sprite { get; set; }
 }
+public struct OnPlayerThemeChanged : IEvent
+{
+    public PlayerThemeItem Item { get; set; }
+}
 public struct OnCoinCollected : IEvent { }
 
 public struct OnPointCollected : IEvent { }

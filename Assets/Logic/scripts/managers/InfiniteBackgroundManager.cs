@@ -2,8 +2,6 @@ public class InfiniteBackgroundManager : InfiniteLevelManager
 {
     // event listeners
     protected EventListener<OnGameStartedEvent> _onGameStartedEventListener = new();
-    protected EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
-    protected EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
 
     protected override void SetListeners()
     {
@@ -11,5 +9,13 @@ public class InfiniteBackgroundManager : InfiniteLevelManager
         _onGameStartedEventListener.Add(SetPartPositions);
         _onLevelRestartedEventListener.Add(SetPartPositions);
         _onLevelExitEventListener.Add(SetPartPositions);
+        _onPlayerThemeChangedEventListener.Add(e => ChangeLevelPart(e.Item.Background));
+    }
+    protected override void ChangeLevelPart(LevelPart levelPart)
+    {
+        base.ChangeLevelPart(levelPart);
+        ClearParts();
+        InstantiateParts();
+        SetPartPositions();
     }
 }

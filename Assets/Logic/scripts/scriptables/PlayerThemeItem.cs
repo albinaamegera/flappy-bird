@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerThemeItem : ShopItem
 {
     public PlayerThemes Theme => _theme;
-    public GameObject LevelPart => _levelPart;
-    public GameObject Background => _background;
+    public LevelPart LevelPart => _levelPart;
+    public LevelPart Background => _background;
 
     [SerializeField] private PlayerThemes _theme;
-    [SerializeField] private GameObject _levelPart;
-    [SerializeField] private GameObject _background;
+    [SerializeField] private LevelPart _levelPart;
+    [SerializeField] private LevelPart _background;
 }
 public enum PlayerThemes
 {

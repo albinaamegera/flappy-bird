@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
-public class PlayerDataManager : MonoBehaviour
+public class PlayerDataManager : MonoBehaviour, IDataManager
 {
+    public Action OnInitializationComplete { get; set; }
+
     [SerializeField] private PlayerDataConfig _playerConfig;
 
     // components to initialize
@@ -19,10 +22,14 @@ public class PlayerDataManager : MonoBehaviour
     private void Awake()
     {
         _onDataSaveEventListener.Add(SaveData);
-
+    }
+    public void Initialize()
+    {
         InitializeData();
 
         InitializeControllers();
+
+        OnInitializationComplete?.Invoke();
     }
     private void InitializeData()
     {

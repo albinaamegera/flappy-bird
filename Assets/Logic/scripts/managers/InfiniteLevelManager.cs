@@ -3,21 +3,21 @@ using UnityEngine;
 public class InfiniteLevelManager : MonoBehaviour
 {
     [Header("settings")]
-    [SerializeField] protected LevelPart _levelpart;
     [SerializeField] protected Timer _timer;
     [SerializeField] protected float _startXPos;
     [SerializeField] protected float _cameraXBorderOffset;
     [SerializeField] protected int _partsCount;
 
+    protected LevelPart _levelpart;
     protected LevelPart[] _partsOnLevel;
     protected Camera _camera;
     protected float _cameraHalfWidth;
 
     // listeners
-    private EventListener<OnLevelStartedEvent> _onLevelStartEventListener = new();
-    private EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
-    private EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
-
+    protected EventListener<OnLevelStartedEvent> _onLevelStartEventListener = new();
+    protected EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
+    protected EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
+    protected EventListener<OnPlayerThemeChanged> _onPlayerThemeChangedEventListener = new();
     private void Awake()
     {
         _camera = Camera.main;
@@ -34,6 +34,12 @@ public class InfiniteLevelManager : MonoBehaviour
         _onLevelStartEventListener.Add(SetPartPositions);
         _onLevelRestartedEventListener.Add(SetPartPositions);
         _onLevelExitEventListener.Add(ClearParts);
+        _onPlayerThemeChangedEventListener.Add(e => ChangeLevelPart(e.Item.LevelPart));
+    }
+    protected virtual void ChangeLevelPart(LevelPart levelPart)
+    {
+        Debug.Log($"theme was changed : {levelPart.gameObject.name}");
+        _levelpart = levelPart;
     }
     protected void InstantiateParts()
     {
@@ -64,6 +70,11 @@ public class InfiniteLevelManager : MonoBehaviour
     }
     protected void ClearParts()
     {
+        if (_partsOnLevel == null)
+        {
+            Debug.LogWarning("no parts on level to clear");
+            return;
+        }
         for (int i = _partsCount - 1; i >= 0; i--)
         {
             Destroy(_partsOnLevel[i].gameObject);

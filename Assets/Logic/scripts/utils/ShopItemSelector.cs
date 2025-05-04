@@ -13,6 +13,6 @@ public class ShopItemSelector : IShopItemVisitor
     public void Visit(PlayerThemeItem item)
     {
         _persistentData.PlayerData.SelectTheme(item.Theme);
-        // invoke event
+        EventBus<OnPlayerThemeChanged>.RaiseEvent(new OnPlayerThemeChanged() { Item = item });
     }
 }

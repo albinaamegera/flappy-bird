@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 100
-  _jumpForce: 10.8
+  _jumpForce: 7
   _jumpCallback:
     m_PersistentCalls:
       m_Calls:

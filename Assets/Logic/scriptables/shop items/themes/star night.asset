@@ -15,5 +15,5 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: b6b4c589772e2a64ebd3d6e14725445e, type: 3}
   _cost: 0
   _theme: 3
-  _levelPart: {fileID: 7511116345217566738, guid: b7368a7bbbfb93143bcdae3a96a1afd1, type: 3}
-  _background: {fileID: 751809462279686282, guid: 29fee70c07f051941b48111cea6df236, type: 3}
+  _levelPart: {fileID: 8852047974734229355, guid: b7368a7bbbfb93143bcdae3a96a1afd1, type: 3}
+  _background: {fileID: 1470849624120700638, guid: 29fee70c07f051941b48111cea6df236, type: 3}
