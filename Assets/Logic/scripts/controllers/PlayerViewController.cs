@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class PlayerViewController : ViewController
 {
     [SerializeField] private CoinViewController _coinView;
+    [SerializeField] private TMP_Text _recordText;
     [Header("shop item panels")]
     [SerializeField] private ShopItemPanelViewController[] _controllers;
 
@@ -17,6 +19,11 @@ public class PlayerViewController : ViewController
 
         InitializeControllers();
     }
+    public override void Show()
+    {
+        base.Show();
+        UpdateRecordText();
+    }
     private void InitializeControllers()
     {
         _checker = new(_persistentData);
@@ -28,4 +35,5 @@ public class PlayerViewController : ViewController
 
         _coinView.Initialize(_persistentData.PlayerData.Wallet);
     }
+    private void UpdateRecordText() => _recordText.text = _persistentData.PlayerData.ScoreCounter.Record.ToString();
 }

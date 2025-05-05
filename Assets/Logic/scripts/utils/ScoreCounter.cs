@@ -10,7 +10,7 @@ public class ScoreCounter
     private int _currentScore;
 
     private EventListener<OnPointCollected> _onPointCollectedEventListener;
-    private EventListener<OnLevelStartedEvent> _onLevelStartedEventListener;
+    private EventListener<OnLevelExitEvent> _onLevelExitEventListener;
     private EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener;
 
     [JsonConstructor]
@@ -63,10 +63,10 @@ public class ScoreCounter
     private void InitListeners()
     {
         _onPointCollectedEventListener = new();
-        _onLevelStartedEventListener = new();
+        _onLevelExitEventListener = new();
         _onLevelRestartedEventListener = new();
         _onPointCollectedEventListener.Add(AddScore);
-        _onLevelStartedEventListener.Add(ResetScoreWhenLevelRestart);
+        _onLevelExitEventListener.Add(ResetScoreWhenLevelRestart);
         _onLevelRestartedEventListener.Add(ResetScoreWhenLevelRestart);
     }
 }
