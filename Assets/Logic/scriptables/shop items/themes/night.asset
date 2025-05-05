@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: night
   m_EditorClassIdentifier: 
   _sprite: {fileID: 21300000, guid: 1c1adba22a2d8ad4d89d67cc48dcde25, type: 3}
-  _cost: 0
+  _cost: 200
   _theme: 2
   _levelPart: {fileID: 6311543399194194588, guid: cc5f316a98663fa45a0e156e7310397a, type: 3}
   _background: {fileID: 4112196948361820564, guid: 3ff26e38a12bf6c419ba6dc03770bd8f, type: 3}

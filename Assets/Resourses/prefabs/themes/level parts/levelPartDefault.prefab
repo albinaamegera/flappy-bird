@@ -167,6 +167,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _removeCallback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2750157309476734711}
+        m_TargetAssemblyTypeName: CoinSpawner, Assembly-CSharp
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9143020956055044617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,8 +454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coinPrefab: {fileID: 211852958552370603, guid: 3277db9c88968e74fbc179b2764e9f73, type: 3}
-  _maxYOffset: 3.75
-  _maxXOffset: 1.19
+  _maxYOffset: 1.75
+  _maxXOffset: 1.1
   _spawnFactor: 70.1
 --- !u!1 &8748485132542696914
 GameObject:

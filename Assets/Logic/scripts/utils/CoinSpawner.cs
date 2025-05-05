@@ -37,6 +37,7 @@ public class CoinSpawner : MonoBehaviour
             Debug.Log("coin not spawn because random");
         }
     }
+    public void Clear() => DestroyCoinIfNotNull();
     private bool CalculateProbability() => Random.Range(0, 100) <= _spawnFactor;
     private Vector2 CalculatePosition()
     {

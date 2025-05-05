@@ -15,7 +15,7 @@ MonoBehaviour:
   _money: 100
   _record: 0
   _selectedSkin: 1
-  _selectedTheme: 1
+  _selectedTheme: 0
   _musicIsOn: 0
   _soundIsOn: 0
   _localeId: 0

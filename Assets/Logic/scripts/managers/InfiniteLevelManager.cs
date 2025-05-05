@@ -77,7 +77,7 @@ public class InfiniteLevelManager : MonoBehaviour
         }
         for (int i = _partsCount - 1; i >= 0; i--)
         {
-            Destroy(_partsOnLevel[i].gameObject);
+            _partsOnLevel[i].Remove();
         }
         _timer.StopTimer();
     }
@@ -91,7 +91,6 @@ public class InfiniteLevelManager : MonoBehaviour
     protected void MoveLastToFirst()
     {
         var first = _partsOnLevel[0];
-        //first.transform.position = new Vector2(_partsOnLevel[_partsCount - 1].transform.position.x + _levelpartWidth, 0f);
         first.Move(_partsOnLevel[_partsCount - 1].transform.position.x);
 
         for (int i = 0; i < _partsCount - 1; i++)
