@@ -63,6 +63,14 @@ MonoBehaviour:
     m_Localized: new record !!
     m_Metadata:
       m_Items: []
+  - m_Id: 17054933597466624
+    m_Localized: continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17055076921028608
+    m_Localized: gain
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
