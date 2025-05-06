@@ -5,6 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     [Header("settings")]
     [SerializeField] private Vector3 _startPosition;
+    [SerializeField] private Vector3 _continueOffset;
+
+    float _disableXPos;
+    Vector3 _continuePos;
 
     PlayerSpriteController _spriteController;
     PlayerMovementController _movementController;
@@ -23,18 +27,24 @@ public class PlayerController : MonoBehaviour
     public void Setup(Sprite sprite)
     {
         EnableControls();
-        SetPosition();
+        SetPosition(_startPosition);
         SendTransform();
         UpdateSprite(sprite);
     }
     public void Restart()
     {
         Enable();
-        SetPosition();
+        SetPosition(_startPosition);
+    }
+    public void Continue()
+    {
+        Enable();
+        SetPosition(_continuePos);
     }
     public void Disable()
     {
         DisableControls();
+        CalculateContinuePosition();
         _movementController.Disable();
         _collider.enabled = false;
     }
@@ -50,7 +60,7 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
     }
     private void UpdateSprite(Sprite sprite) => _spriteController.UpdateSprite(sprite);
-    private void SetPosition() => _transform.position = _startPosition;
+    private void SetPosition(Vector3 position) => _transform.position = position;
     private void EnableControls()
     {
         _controls.Player.Enable();
@@ -62,4 +72,9 @@ public class PlayerController : MonoBehaviour
         _controls.Player.Disable();
     }
     private void SendTransform() => EventBus<OnPlayerTransform>.RaiseEvent(new OnPlayerTransform() { transform = _transform });
+    private void CalculateContinuePosition()
+    {
+        _disableXPos = _transform.position.x;
+        _continuePos = _continueOffset + new Vector3(_disableXPos, 0f, 0f);
+    }
 }

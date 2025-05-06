@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startPosition: {x: -4.25, y: 1.7, z: 0}
+  _continueOffset: {x: -2, y: 1.7, z: 0}
 --- !u!114 &6058202012756477342
 MonoBehaviour:
   m_ObjectHideFlags: 0
