@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [Header("settings")]
     [SerializeField] private Vector3 _startPosition;
     [SerializeField] private Vector3 _continueOffset;
+    [SerializeField] private Timer _timer;
 
     float _disableXPos;
     Vector3 _continuePos;
@@ -24,6 +25,14 @@ public class PlayerController : MonoBehaviour
         _collider = GetComponent<CircleCollider2D>();
         _transform = transform;
     }
+    private void OnEnable()
+    {
+        _timer.OnTimerComplete.AddListener(OnContinue);
+    }
+    private void OnDisable()
+    {
+        _timer.OnTimerComplete.RemoveAllListeners();
+    }
     public void Setup(Sprite sprite)
     {
         EnableControls();
@@ -38,8 +47,10 @@ public class PlayerController : MonoBehaviour
     }
     public void Continue()
     {
-        Enable();
+        //Enable();
         SetPosition(_continuePos);
+        _movementController.EnableWithZeroGravity();
+        _timer.StartTimer();
     }
     public void Disable()
     {
@@ -77,4 +88,5 @@ public class PlayerController : MonoBehaviour
         _disableXPos = _transform.position.x;
         _continuePos = _continueOffset + new Vector3(_disableXPos, 0f, 0f);
     }
+    private void OnContinue() => Enable();
 }

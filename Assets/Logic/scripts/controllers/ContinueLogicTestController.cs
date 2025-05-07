@@ -15,13 +15,14 @@ public class ContinueLogicTestController : MonoBehaviour
     private void Continue()
     {
         _onContinue.Invoke();
-        _timer.OnTimerComplete.AddListener(OnContinue);
-        _timer.StartTimer();
+        //_timer.OnTimerComplete.AddListener(OnContinue);
+        //_timer.StartTimer();
+        OnContinue();
     }
     private void OnContinue()
     {
         EventBus<OnLevelContinueEvent>.RaiseEvent(new OnLevelContinueEvent());
-        _timer.OnTimerComplete.RemoveAllListeners();
+        //_timer.OnTimerComplete.RemoveAllListeners();
     }
     private void OnDisable()
     {
