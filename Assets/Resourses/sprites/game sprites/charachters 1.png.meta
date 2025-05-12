@@ -1,25 +1,55 @@
 fileFormatVersion: 2
-guid: 947819c0f5fcd704594ecffb72fc9eac
+guid: 2492260b6d5cc604e8bc930f26e2f81f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6421475207426757163
-    second: charachters_0
+      213: 2133428082497442913
+    second: charachters 1_0
   - first:
-      213: -515732588352434019
-    second: charachters_1
+      213: 4133250080667285872
+    second: charachters 1_1
   - first:
-      213: -9118598125787201999
-    second: charachters_2
+      213: -9087438908285005754
+    second: charachters 1_2
   - first:
-      213: -6823241880993502455
-    second: charachters_3
+      213: 7501183546825219684
+    second: charachters 1_3
   - first:
-      213: 1687725886917854564
-    second: charachters_4
+      213: -3486065794005025588
+    second: charachters 1_4
   - first:
-      213: 2623948441304619068
-    second: charachters_5
+      213: 6936327070833640795
+    second: charachters 1_5
+  - first:
+      213: 4931791868853343334
+    second: charachters 1_6
+  - first:
+      213: 2787575024068708911
+    second: charachters 1_7
+  - first:
+      213: 8302707343111231172
+    second: charachters 1_8
+  - first:
+      213: 3604373953322647122
+    second: charachters 1_9
+  - first:
+      213: -1201101450020286941
+    second: charachters 1_10
+  - first:
+      213: 5429706561800646754
+    second: charachters 1_11
+  - first:
+      213: -8446622722578859934
+    second: charachters 1_12
+  - first:
+      213: -8957254587615896042
+    second: charachters 1_13
+  - first:
+      213: 787544156688707837
+    second: charachters 1_14
+  - first:
+      213: 2378966537045963643
+    second: charachters 1_15
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -87,7 +117,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -144,20 +174,20 @@ TextureImporter:
       name: robo
       rect:
         serializedVersion: 2
-        x: 1
-        y: 481
-        width: 158
-        height: 158
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5dda95f325652e6a0800000000000000
-      internalID: -6421475207426757163
+      spriteID: 1645a13a9857b9d10800000000000000
+      internalID: 2133428082497442913
       vertices: []
       indices: 
       edges: []
@@ -166,20 +196,20 @@ TextureImporter:
       name: fish
       rect:
         serializedVersion: 2
-        x: 161
-        y: 481
-        width: 158
-        height: 158
+        x: 32
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d90192081ffb7d8f0800000000000000
-      internalID: -515732588352434019
+      spriteID: 079370aac014c5930800000000000000
+      internalID: 4133250080667285872
       vertices: []
       indices: 
       edges: []
@@ -188,20 +218,20 @@ TextureImporter:
       name: cosmo
       rect:
         serializedVersion: 2
-        x: 321
-        y: 481
-        width: 158
-        height: 158
+        x: 64
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13e39e6215b347180800000000000000
-      internalID: -9118598125787201999
+      spriteID: 640db91d57ee2e180800000000000000
+      internalID: -9087438908285005754
       vertices: []
       indices: 
       edges: []
@@ -210,42 +240,42 @@ TextureImporter:
       name: dragon
       rect:
         serializedVersion: 2
-        x: 481
-        y: 481
-        width: 158
-        height: 158
+        x: 96
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 90b60da09a9fe41a0800000000000000
-      internalID: -6823241880993502455
+      spriteID: 46e958f51be891860800000000000000
+      internalID: 7501183546825219684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bateye
+      name: bat_eye
       rect:
         serializedVersion: 2
-        x: 1
-        y: 321
-        width: 158
-        height: 158
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46548ff80c10c6710800000000000000
-      internalID: 1687725886917854564
+      spriteID: cccb0bc51a10f9fc0800000000000000
+      internalID: -3486065794005025588
       vertices: []
       indices: 
       edges: []
@@ -254,20 +284,20 @@ TextureImporter:
       name: dino
       rect:
         serializedVersion: 2
-        x: 161
-        y: 321
-        width: 158
-        height: 158
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c38d6e084332a6420800000000000000
-      internalID: 2623948441304619068
+      spriteID: b5507fe78b8c24060800000000000000
+      internalID: 6936327070833640795
       vertices: []
       indices: 
       edges: []
@@ -276,20 +306,20 @@ TextureImporter:
       name: ghost
       rect:
         serializedVersion: 2
-        x: 321
-        y: 321
-        width: 158
-        height: 158
+        x: 64
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7c0376cacc260ea4fbb2736bbf13d0c5
-      internalID: 571180223
+      spriteID: 664d921339e317440800000000000000
+      internalID: 4931791868853343334
       vertices: []
       indices: 
       edges: []
@@ -298,20 +328,20 @@ TextureImporter:
       name: scull
       rect:
         serializedVersion: 2
-        x: 481
-        y: 321
-        width: 158
-        height: 158
+        x: 96
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7f3fdb91ce6399c47b66c2049d06681b
-      internalID: 777001413
+      spriteID: f2acd5617b47fa620800000000000000
+      internalID: 2787575024068708911
       vertices: []
       indices: 
       edges: []
@@ -320,20 +350,20 @@ TextureImporter:
       name: default_bird
       rect:
         serializedVersion: 2
-        x: 1
-        y: 161
-        width: 158
-        height: 158
+        x: 0
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8fea1c9ab7b5b7943941f38fe199dfd7
-      internalID: -1045772390
+      spriteID: 4c61c24c654293370800000000000000
+      internalID: 8302707343111231172
       vertices: []
       indices: 
       edges: []
@@ -342,20 +372,20 @@ TextureImporter:
       name: blue_bird
       rect:
         serializedVersion: 2
-        x: 161
-        y: 161
-        width: 158
-        height: 158
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3aeac67c7c976bc46b8c7997a8932780
-      internalID: -881627980
+      spriteID: 25e7775830f450230800000000000000
+      internalID: 3604373953322647122
       vertices: []
       indices: 
       edges: []
@@ -364,20 +394,20 @@ TextureImporter:
       name: red_bird
       rect:
         serializedVersion: 2
-        x: 321
-        y: 161
-        width: 158
-        height: 158
+        x: 64
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f893accd756a3a94698da07e969d23e0
-      internalID: -1403317885
+      spriteID: 32e855c4894d45fe0800000000000000
+      internalID: -1201101450020286941
       vertices: []
       indices: 
       edges: []
@@ -386,20 +416,20 @@ TextureImporter:
       name: green_bird
       rect:
         serializedVersion: 2
-        x: 481
-        y: 161
-        width: 158
-        height: 158
+        x: 96
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7f76391fa53a2954f859c6cf32cdeb79
-      internalID: -359605559
+      spriteID: 2603cb2a9513a5b40800000000000000
+      internalID: 5429706561800646754
       vertices: []
       indices: 
       edges: []
@@ -408,20 +438,20 @@ TextureImporter:
       name: diamond_bird
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 158
-        height: 158
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5c1d2e72ad9019d4cadfce790a0646d1
-      internalID: 1122534967
+      spriteID: 268b1fcc26197ca80800000000000000
+      internalID: -8446622722578859934
       vertices: []
       indices: 
       edges: []
@@ -430,42 +460,42 @@ TextureImporter:
       name: white_bird
       rect:
         serializedVersion: 2
-        x: 161
-        y: 1
-        width: 158
-        height: 158
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c107cdda35680554fb1f643f8757ff2d
-      internalID: 292713700
+      spriteID: 61e9a6ef86071b380800000000000000
+      internalID: -8957254587615896042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pirple_bird
+      name: purple_bird
       rect:
         serializedVersion: 2
-        x: 321
-        y: 1
-        width: 158
-        height: 158
+        x: 64
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7b3dbe01851e68f498171ddc3106fb29
-      internalID: -1403735435
+      spriteID: df07d58ec3bedea00800000000000000
+      internalID: 787544156688707837
       vertices: []
       indices: 
       edges: []
@@ -474,20 +504,20 @@ TextureImporter:
       name: black_bird
       rect:
         serializedVersion: 2
-        x: 481
-        y: 1
-        width: 158
-        height: 158
+        x: 96
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b9440caf96f065543854df4d3d55d7cd
-      internalID: -399283126
+      spriteID: b737a2d0679c30120800000000000000
+      internalID: 2378966537045963643
       vertices: []
       indices: 
       edges: []
@@ -496,7 +526,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59489cd2cbb4f2c40ae84a3ddf4e5466
+    spriteID: 4aed4ae374c38484e9a2d8dde2340e92
     internalID: 0
     vertices: []
     indices: 
@@ -506,22 +536,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bateye: 1687725886917854564
-      black_bird: -399283126
-      blue_bird: -881627980
-      cosmo: -9118598125787201999
-      default_bird: -1045772390
-      diamond_bird: 1122534967
-      dino: 2623948441304619068
-      dragon: -6823241880993502455
-      fish: -515732588352434019
-      ghost: 571180223
-      green_bird: -359605559
-      pirple_bird: -1403735435
-      red_bird: -1403317885
-      robo: -6421475207426757163
-      scull: 777001413
-      white_bird: 292713700
+      bat_eye: -3486065794005025588
+      black_bird: 2378966537045963643
+      blue_bird: 3604373953322647122
+      cosmo: -9087438908285005754
+      default_bird: 8302707343111231172
+      diamond_bird: -8446622722578859934
+      dino: 6936327070833640795
+      dragon: 7501183546825219684
+      fish: 4133250080667285872
+      ghost: 4931791868853343334
+      green_bird: 5429706561800646754
+      purple_bird: 787544156688707837
+      red_bird: -1201101450020286941
+      robo: 2133428082497442913
+      scull: 2787575024068708911
+      white_bird: -8957254587615896042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e93a02a915c7fe46a0d69d8ba3fd85d, type: 3}
   m_Name: cosmo
   m_EditorClassIdentifier: 
-  _sprite: {fileID: -9118598125787201999, guid: 947819c0f5fcd704594ecffb72fc9eac, type: 3}
+  _sprite: {fileID: -9087438908285005754, guid: 2492260b6d5cc604e8bc930f26e2f81f, type: 3}
   _cost: 0
   _skin: 10
