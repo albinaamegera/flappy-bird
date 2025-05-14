@@ -17,6 +17,7 @@ public class InfiniteLevelManager : MonoBehaviour
     protected EventListener<OnLevelStartedEvent> _onLevelStartEventListener = new();
     protected EventListener<OnLevelRestartedEvent> _onLevelRestartedEventListener = new();
     protected EventListener<OnLevelExitEvent> _onLevelExitEventListener = new();
+    protected EventListener<OnLevelContinueEvent> _onLevelContinueEventListenr = new();
     protected EventListener<OnPlayerThemeChanged> _onPlayerThemeChangedEventListener = new();
     private void Awake()
     {
@@ -34,6 +35,7 @@ public class InfiniteLevelManager : MonoBehaviour
         _onLevelStartEventListener.Add(SetPartPositions);
         _onLevelRestartedEventListener.Add(SetPartPositions);
         _onLevelExitEventListener.Add(ClearParts);
+        _onLevelContinueEventListenr.Add(SetPartPositionsOnContinue);
         _onPlayerThemeChangedEventListener.Add(e => ChangeLevelPart(e.Item.LevelPart));
     }
     protected virtual void ChangeLevelPart(LevelPart levelPart)
@@ -59,6 +61,25 @@ public class InfiniteLevelManager : MonoBehaviour
             if (i == 0)
             {
                 _partsOnLevel[i].Move(_startXPos);
+            }
+            else
+            {
+                _partsOnLevel[i].Move(_partsOnLevel[i - 1].transform.position.x);
+            }
+        }
+
+        _timer.StartTimer();
+    }
+    protected void SetPartPositionsOnContinue()
+    {
+        _timer.ResetTimer();
+        float currentStartXPos = _camera.transform.position.x;
+
+        for (int i = 0; i < _partsCount; i++)
+        {
+            if (i == 0)
+            {
+                _partsOnLevel[i].Move(currentStartXPos);
             }
             else
             {
